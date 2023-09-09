@@ -421,10 +421,10 @@
         <div class="fila">
           <!-- Formulario -->
           <div class="col">
-            <input type="text" placeholder="Tú Nombre" />
-            <input type="text" placeholder="Número telefónico" />
-            <input type="text" placeholder="Dirección de correo" />
-            <input type="text" placeholder="Tema" />
+            <input class="placeholder1" type="text" placeholder="Tú Nombre" />
+            <input class="placeholder2" type="text" placeholder="Número telefónico" />
+            <input class="placeholder3" type="text" placeholder="Dirección de correo" />
+            <input class="placeholder4" type="text" placeholder="Tema" />
             <textarea
               name=""
               id=""
@@ -446,12 +446,12 @@
         <i class="fa-solid fa-angles-up"></i>
       </a>
       <div class="redes">
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-skype"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#"><i class="fa-solid fa-rss"></i></a>
-      </div>
+        <a href="https://www.salesforce.com/trailblazer/profile" target="_blank"><i class="fa-brands fa-salesforce"></i></a>
+        <a href="https://www.linkedin.com/in/joaquin-haro-filippon-a05967191/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://discord.com/users/335657955510714368" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Keromon2k19" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://wa.me/542945699379" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
     </footer>
 
     <div id="app-cover">
@@ -472,14 +472,6 @@
           </div>
         </div>
         <div id="player-content">
-          <div id="album-art">
-            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg" class="active" id="_1">
-            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
-            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
-            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
-            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
-            <div id="buffer-box">Buffering ...</div>
-          </div>
           <div id="player-controls">
             <div class="control">
               <div class="button" id="play-previous">
@@ -494,6 +486,16 @@
             <div class="control">
               <div class="button" id="play-next">
                 <i class="fas fa-forward"></i>
+              </div>
+            </div>
+            <div class="control">
+              <div class="button volume" id="volume-button">
+                <i class="fa-solid fa-volume-high"></i>
+                <i class="fa-solid fa-volume-low"></i> 
+                <i class="fa-solid fa-volume-xmark"></i>
+            </div>
+              <div class="volume-control" id="volume-control">
+                <input class="volume-bar" type="range" id="volume-range" min="0" max="100" step="1" value="50">
               </div>
             </div>
           </div>

@@ -44,7 +44,7 @@ position: absolute;
 top: 30%; /* Ajusta la posición vertical según tus necesidades */
 left: 50%;
 transform: translate(-50%, -50%);
-z-index: 1201; /* Ajusta el z-index para que esté por encima de la animación */
+z-index: 1001;
 opacity: 1;
 transition: opacity 0.3s ease-out;
 }
@@ -169,7 +169,9 @@ transition: all 0.3s 1s ease-out;
     
 /* MENU */
 .contenedor-header{
-    background: #393939;
+    background-color: #ffffff0b;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(55px);
     position: fixed;
     width: 100%;
     top: 0;
@@ -184,27 +186,26 @@ transition: all 0.3s 1s ease-out;
     align-items: center;
     padding: 15px 20px;
 }
-.contenedor-header header .logo a{
-    font-family: 'Righteous';
-    font-size: 36px;
-    color: #fff;
-    text-decoration: none;
-}
 .contenedor-header header ul{
     display: flex;
     list-style: none;
 }
 .contenedor-header header nav ul li a{
     text-align: none;
-    color: #ffffff;
+    color: #fff;
     margin: 0 15px;
     padding: 3px;
     transition: .3s;
     text-decoration: none;
+    border-radius: 5px;
 }
+
 .contenedor-header header nav ul li a:hover{
-    color: #1799c1;
-    border-bottom: solid rgba(255, 255, 0, 0.514) 2px;
+    color: #fff;
+    background-color: #1799c1;
+    border-radius: 5px;
+    padding: 2px 12px ;
+    transition: .3s;
 }
 .nav-responsive{
     color:#fff;
@@ -214,7 +215,7 @@ transition: all 0.3s 1s ease-out;
     display: none;
 }
 .logo-img {
-    width: 80px;
+    width: 60px;
     height: auto;
 }
 
@@ -276,12 +277,14 @@ transition: all 0.3s 1s ease-out;
 }
 
 .inicio .contenido-banner h1{
+    color: #fff;
     margin-top: 40px;
     font-size: 42px;
     font-family: 'Righteous';
 }
 
 .inicio .contenido-banner h2{
+    color: #fff;
     font-size: 15px;
     font-weight: normal;
 }
@@ -298,11 +301,17 @@ transition: all 0.3s 1s ease-out;
     height: 42px;
     margin: 40px 5px;
     font-size: 20px;
-    transition: .3s;
+    transition: .5s;
+    box-shadow: 1px 9px 49px 1px #1799c174 ;
+    -webkit-box-shadow: 0px 0px 5px 2px #1799c174 inset;
+    -moz-box-shadow: 1px 9px 5px 1px #1799c174 ;
 }
 
 .inicio .contenido-banner .redes a:hover{
     background-color: #1799c1;
+    box-shadow: 1px 9px 49px 1px #1799c1;
+    -webkit-box-shadow: 0px 0px 5px 2px #1799c1;
+    -moz-box-shadow: 1px 9px 5px 1px #1799c1;
 }
 
 .sobremi{
@@ -764,7 +773,6 @@ transition: all 0.3s 1s ease-out;
     width: 100%;
     height: 100%;
     text-align: center;
-    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -776,11 +784,14 @@ transition: all 0.3s 1s ease-out;
 
 .portfolio .galeria .proyecto .overlay h3{
     margin-bottom: 20px;
-    transition: 1s;
+    transition: .5s;
 }
 
 .portfolio .galeria .proyecto .overlay:hover{
-    opacity: 1;
+    opacity: 2;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(25px);
+    transition: .5s;
 }
 
 .portfolio .galeria .proyecto .overlay:hover h3{
@@ -827,11 +838,20 @@ transition: all 0.3s 1s ease-out;
     border: none;
     border-radius: 10px;
     margin-bottom: 20px;
-    background-color: #252A2E;
     color: #fff;
     font-size: 18px;
     background-color: rgba(37, 42, 46, 0.179); 
     backdrop-filter: blur(10px); 
+    transition: 0.5s;
+}
+.contacto .col input::placeholder,
+.contacto .col textarea::placeholder {
+    color: #fff;
+}
+.contacto .col input:hover,
+.contacto .col textarea:hover {
+    box-shadow: 1px 9px 49px 1px #1799c1;
+    -webkit-box-shadow: 1px 9px 49px 1px #1799c1;
 }
 
 .contacto button{
@@ -905,31 +925,50 @@ footer .redes{
 
 footer .redes a{
     color: #fff;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 2px solid #1799c1ab;
     border-radius: 100%;
     width: 42px;
     height: 42px;
     line-height: 42px;
     margin: 40px 5px;
     font-size: 20px;
-    transition: .3s;
+    transition: .5s;
+    box-shadow: 1px 9px 49px 1px rgba(0,0,0,0.75) ;
+    -webkit-box-shadow: 0px 0px 5px 2px #1799c174 ;
+    -moz-box-shadow: 1px 9px 5px 1px rgba(0,0,0,0.75) ;
+}
+
+footer .redes a:hover{
+    background-color: #1799c1;
 }
 
 footer .arriba{
-    display: block;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 3px solid #1799c1;
+    border-radius: 100%;
     width: 50px;
     height: 50px;
-    background-color: #1CB698;
-    color: #fff;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: -25px;
-    border-radius: 50%;
     line-height: 50px;
     font-size: 18px;
+    transition: .6s;
+    box-shadow: 1px 9px 49px 1px rgba(0,0,0,0.75) ;
+    -webkit-box-shadow: 0px 3px 10px 2px #1799c174 inset ;
+    -moz-box-shadow: 1px 9px 5px 1px rgba(0,0,0,0.75) ;
+}
+footer .arriba:hover{
+    background-color: #1799c1;
 }
 
 /* SECCION RESPONSIVE */
@@ -945,18 +984,21 @@ footer .arriba{
         position: absolute;
         right: 0;
         top: 75px;
-        background:rgba (255 255 255 0.1);
-        backdrop-filter: blur(15px);
         width: 180px;
         border-radius: 10px;
     }
+
     nav.responsive ul{
         display: block !important;
         border-radius: 10px;
+        background-color: #1e2326;
+        backdrop-filter: blur(100px);
+
     }
     nav.responsive ul li{
         padding: 10px 0; 
         border-radius: 10px;
+        
     }
 }
 
@@ -1016,7 +1058,7 @@ footer .arriba{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1001;
+    z-index: 20;
     
     transform: translate(-50%, -50%);
     animation: modal-fade-in 0.4s ease-in-out;
@@ -1135,93 +1177,104 @@ footer .arriba{
   
   /* MUSIC PLAYER */
 
-#app-cover {
+    #app-cover {
     position: fixed;
-    top: 85%;
-    right: 80%;
-    left: 0;
-    width: 350px;
+    top: 89%;
+    right: 89%;
+    left: 10px;
+    width: 250px;
     height: 100px;
     margin: -4px auto;
-    z-index: 50 ;
-  }
-  
-  #player {
+    z-index: 10;
+    }
+
+    #player {
     position: relative;
     height: 100%;
+    z-index: 3;
+    }
     
-  }
-  
-  #player-track {
+    #player-track {
     position: absolute;
     top: 0;
-    right: 15px;
-    left: 15px;
-    padding: 13px 22px 10px 184px;
-    background-color: #fff7f7;
-    border-radius: 15px 15px 0 0;
-    transition: 0.3s ease top;
+    right: 15;
+    left: 15;
+    padding: 22px 12px 10px 50px;
+    background-color: #252a2e;
+    border-radius: 15px 15px 0  0 ;
+    transition: 0.5s ease top;
     z-index: 1;
-  }
-  
-  #player-track.active {
-    top: -92px;
-  }
-  
-  #album-name {
+    }
+
+    #player-content {
+    position: relative;
+    height: 100%;
+    background-color: #000000;
+    box-shadow: 0 22px 50px #000000;
+    border-radius: 15px;
+    z-index: 2;
+    }
+    
+    #player-track.active {
+    top: -97px;
+    padding: 8px 52px 21px 47px;
+    border-bottom: 0 3px 3px 3px solid #009ddb;
+    }
+
+    #album-name {
     color: #54576f;
     font-size: 17px;
     font-weight: bold;
-  }
-  
-  #track-name {
+    }
+
+    #track-name {
     color: #acaebd;
     font-size: 13px;
     margin: 2px 0 13px 0;
-  }
-  
-  #track-time {
+    }
+
+    #track-time {
     height: 12px;
     margin-bottom: 3px;
     overflow: hidden;
-  }
-  
-  #current-time {
+    }
+
+    #current-time {
     float: left;
-  }
-  
-  #track-length {
+    }
+
+    #track-length {
     float: right;
-  }
-  
-  #current-time,
-  #track-length {
+    }
+    
+    #current-time,
+    #track-length {
     color: transparent;
     font-size: 11px;
     background-color: #ffe8ee;
     border-radius: 10px;
     transition: 0.3s ease all;
-  }
-  
-  #track-time.active #current-time,
-  #track-time.active #track-length {
+    }
+    
+    #track-time.active #current-time,
+    #track-time.active #track-length {
     color: #f86d92;
     background-color: transparent;
-  }
-  
-  #s-area,
-  #seek-bar {
+    }
+    
+    #s-area,
+    #seek-bar {
     position: relative;
     height: 4px;
     border-radius: 4px;
-  }
-  
-  #s-area {
+    }
+    
+    #s-area {
     background-color: #ffe8ee;
     cursor: pointer;
-  }
-  
-  #ins-time {
+    }
+
+    #ins-time {
     position: absolute;
     top: -29px;
     color: #fff;
@@ -1230,23 +1283,23 @@ footer .arriba{
     padding: 5px 6px;
     border-radius: 4px;
     display: none;
-  }
-  
-  #s-hover {
+    }
+
+    #s-hover {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     opacity: 0.2;
     z-index: 2;
-  }
-  
-  #ins-time,
-  #s-hover {
+    }
+
+    #ins-time,
+    #s-hover {
     background-color: #3b3d50;
-  }
-  
-  #seek-bar {
+    }
+
+    #seek-bar {
     content: "";
     position: absolute;
     top: 0;
@@ -1256,153 +1309,67 @@ footer .arriba{
     background-color: #fd6d94;
     transition: 0.2s ease width;
     z-index: 1;
-  }
-  
-  #player-content {
+    }
+    #player-content {
     position: relative;
     height: 100%;
     background-color: #fff;
     border-radius: 15px;
     z-index: 2;
-  }
-  
-  #album-art {
-    position: absolute;
-    top: -40px;
-    width: 115px;
-    height: 115px;
-    margin-left: 40px;
-    transform: rotateZ(0);
-    transition: 0.3s ease all;
-    box-shadow: 0 0 0 10px #fff;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  
-  #album-art.active {
-    top: -60px;
-    box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
-  }
-  
-  #album-art:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    margin: -10px auto 0 auto;
-    background-color: #1d94b7;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 2px #fff;
-    z-index: 2;
-  }
-  
-  #album-art img {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: -1;
-  }
-  
-  #album-art img.active {
-    opacity: 1;
-    z-index: 1;
-  }
-  
-  #album-art.active img.active {
-    z-index: 1;
-    animation: rotateAlbumArt 3s linear 0s infinite forwards;
-  }
-  
-  @keyframes rotateAlbumArt {
-    0% {
-      transform: rotateZ(0);
     }
-    100% {
-      transform: rotateZ(360deg);
-    }
-  }
-  
-  #buffer-box {
-    position:static;
-    top: 50%;
-    right: 0;
-    left: 0;
-    height: 13px;
-    color: #1f1f1f;
-    font-size: 13px;
-    font-family: Helvetica;
-    text-align: center;
-    font-weight: bold;
-    line-height: 1;
-    padding: 6px;
-    margin: -12px auto 0 auto;
-    background-color: rgba(255, 255, 255, 0.19);
-    opacity: 0;
-    z-index: 2;
-  }
-  
-  #album-art img,
-  #buffer-box {
-    transition: 0.1s linear all;
-  }
-  
-  #album-art.buffering img {
-    opacity: 0.25;
-  }
-  
-  #album-art.buffering img.active {
-    opacity: 0.8;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-  }
-  
-  #album-art.buffering #buffer-box {
-    opacity: 1;
-  }
-  
-  #player-controls {
-    width: 200px;
+
+    #player-controls {
+    width: 230px;
     height: 100%;
-    margin: 0 5px 0 141px;
+    margin: -7px 15px 7px 0px;
     float: right;
     overflow: hidden;
-  }
-  
-  .control {
-    width: 33.333%;
+    }
+    
+    .control {
+    width: 25%;
     float: left;
     padding: 12px 0;
-  }
-  
-  .button {
+    }
+
+    .button {
     width: 26px;
     height: 26px;
     padding: 25px;
     background-color: #fff;
     border-radius: 6px;
     cursor: pointer;
-  }
-  
-  .button i {
+    position: relative; /* Agregado: Posición relativa para alinear la barra de volumen */
+    }
+
+    .button i {
     display: block;
-    color: #d6dee7;
+    color: #1e2326;
     font-size: 26px;
     text-align: center;
     line-height: 1;
-  }
-  
-  .button,
-  .button i {
+    }
+    
+    .button,
+    .button i {
     transition: 0.2s ease all;
-  }
-  
-  .button:hover i {
-    color: #000000;
-  }
+    }
+
+    .button:hover i {
+    color: #1799c1;
+    }   
+    
+    #volume-control {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 208px;
+    height: 3px;
+    opacity: 0;
+    transition: opacity 0.5s ease, width 1s ease;
+    }
+    .volume-control input[type="range"] {
+    width: 210px;
+    height: 3px;
+    }
