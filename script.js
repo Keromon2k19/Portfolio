@@ -16,32 +16,6 @@ function seleccionar(){
     menuVisible = false;
 }
 
-//Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
-    var skills = document.getElementById("skills");
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
-        let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("apex");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("photoshop");
-        habilidades[3].classList.add("javascript");
-        habilidades[4].classList.add("comunicacion");
-        habilidades[5].classList.add("trabajo");
-        habilidades[6].classList.add("creatividad");
-        habilidades[7].classList.add("dedicacion");
-    }
-}
-
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
-    efectoHabilidades();
-} 
-
-let el = $('.switch');
-let cur = el.find('.current');
-let options = el.find('.options li');
-let content = $('#content');
 
 document.addEventListener("DOMContentLoaded", function () {
     const openModalBtnSobreMi = document.getElementById("openModalBtn");
@@ -59,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function closePdfModal() {
         pdfModal.style.display = "none";
-        pdfViewer.src = ""; // Reset the PDF viewer source
+        pdfViewer.src = "";
     }
 
     openModalBtnSobreMi.addEventListener("click", function () {
@@ -87,18 +61,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//LOADER
-
+// LOADER
 $(document).ready(function() {
  
     // Fakes the loading setting a timeout
       setTimeout(function() {
           $('body').addClass('loaded');
       }, 3500);
-   
 });
 
-// MUSCI PLAYER
+
+// MUSIC PLAYER
 
 $(document).ready(function () {
   var playerTrack = $("#player-track"),
@@ -288,9 +261,12 @@ $(document).ready(function () {
     audio = new Audio();
     loadTrack(currIndex);
 
+    audio.volume = 0.25;
+
     audio.loop = false;
 
     playPauseButton.on("click", playPause);
+    playPause();
 
     sArea.mousemove(function (event) {
       showHover(event);
@@ -451,3 +427,131 @@ $(document).ready(function () {
   });
 });
 
+// input animation
+document.addEventListener('DOMContentLoaded', function() {
+  const inputElements = document.querySelectorAll('.input-animate');
+
+  inputElements.forEach(function(inputElement) {
+      inputElement.addEventListener('focus', function() {
+          inputElement.nextElementSibling.classList.add('active');
+      });
+
+      inputElement.addEventListener('blur', function() {
+          if (inputElement.value === '') {
+              inputElement.nextElementSibling.classList.remove('active');
+          }
+      });
+  });
+});
+
+
+
+
+// bars animated
+
+function addClassesToBar(barElement, level) {
+  const stages = barElement.querySelectorAll('.stage');
+  const levelClasses = ['beginner', 'novice', 'intermediate', 'advanced', 'master'];
+
+  // Remover todas las clases de nivel de los divs de la barra
+  stages.forEach(stage => {
+    levelClasses.forEach(levelClass => {
+      stage.classList.remove(levelClass);
+    });
+  });
+
+  // Agregar las clases de nivel hasta el nivel deseado
+  for (let i = 0; i <= levelClasses.indexOf(level); i++) {
+    stages[i].classList.add(levelClasses[i]);
+  }
+}
+
+// Función para activar el observador para barras específicas
+function activateObserver(barClassName, level) {
+  const bars = document.querySelectorAll(`.${barClassName}`);
+  bars.forEach(bar => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.25
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Cuando la barra entra en la vista, agrega las clases de nivel
+          addClassesToBar(bar, level);
+          // Agregar animación al padding
+          animatePaddingForBar(bar, '35px 5px 5px 5px');
+          observer.unobserve(bar);
+        }
+      });
+    }, options);
+
+    observer.observe(bar);
+  });
+}
+
+
+// Activar el observador para barras específicas
+activateObserver('bar-beginner', 'beginner');
+activateObserver('bar-novice', 'novice');
+activateObserver('bar-intermediate', 'intermediate');
+activateObserver('bar-advanced', 'advanced');
+activateObserver('bar-master', 'master');
+
+function addClassesToParagraphs(barElement, level) {
+  const paragraphs = barElement.querySelectorAll('.stage p');
+  const levelClasses = ['beginner', 'novice', 'intermediate', 'advanced', 'master'];
+
+  // Remover todas las clases de nivel de los elementos <p>
+  paragraphs.forEach(paragraph => {
+    levelClasses.forEach(levelClass => {
+      paragraph.classList.remove(`stage-title-${levelClass}`);
+    });
+  });
+
+  // Agregar las clases de nivel hasta el nivel deseado
+  for (let i = 0; i <= levelClasses.indexOf(level); i++) {
+    paragraphs[i].classList.add(`stage-title-${levelClasses[i]}`);
+  }
+}
+
+// Función para activar el observador para elementos <p> dentro de barras específicas
+function activateParagraphObserver(barClassName, level) {
+  const bars = document.querySelectorAll(`.${barClassName}`);
+  bars.forEach(bar => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.75
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Cuando la barra entra en la vista, agrega las clases de nivel a los elementos <p>
+          addClassesToParagraphs(bar, level); // Cambia 'intermediate' al nivel deseado
+          observer.unobserve(bar); // Detener la observación después de agregar las clases
+        }
+      });
+    }, options);
+
+    observer.observe(bar);
+  });
+}
+
+// Activar el observador para elementos <p> dentro de barras específicas
+activateParagraphObserver('bar-beginner', 'beginner');
+activateParagraphObserver('bar-novice', 'novice');
+activateParagraphObserver('bar-intermediate', 'intermediate');
+activateParagraphObserver('bar-advanced', 'advanced');
+activateParagraphObserver('bar-master', 'master');
+
+function animatePaddingForBar(barElement, paddingValues) {
+  const animationDuration = '.5s'; // Duración de la animación en segundos
+  const animationTiming = 'ease-out'; // Temporización de la animación
+
+  barElement.style.transition = `padding ${animationDuration} ${animationTiming}`;
+  barElement.style.padding = paddingValues;
+}

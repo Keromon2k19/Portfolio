@@ -3,7 +3,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -12,25 +13,25 @@
       referrerpolicy="no-referrer"
     />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="estilo.css"/>
   </head>
   <body>
       
     <!-- LOADER -->
-    <div id="loader-wrapper">
+    <!-- <div id="loader-wrapper">
       <div class="loader-logo">
-        <img class="logo-img" src="/img/wings kero logo final.png" alt="Logo">
+        <img class="logo-img" src="/img/wings kero logo final white.png" alt="Logo">
       </div>
       <div id="loader"></div>
       <div class="loader-section section"></div>
     </div>
-  
+   -->
     <!-- MENU ENCABEZADO -->
     <div class="contenedor-header">
       <header>
         <div class="logo">
           <a href="#">
-              <img src="/img/wings kero logo final.png" class="logo-img" alt="Logo">
+              <img src="/img/wings kero logo final white.png" class="logo-img" alt="Logo">
           </a>
       </div>
         <nav id="nav">
@@ -50,26 +51,43 @@
     </div>
 
     <!-- SECCION INICIO -->
-    <section id="inicio" class="inicio">
+    <section id="inicio" class="inicio section-shadow">
       <div class="cont-bg"><img class="inicio-bg"></div>
       <div class="contenido-banner">
           <div class="contenedor-img">
-              <img src="img/hero.png" alt="" />
+              <img src="/Portfolio/img/hero.png" alt="" />
           </div>
           <h1>Joaquin Haro Filippon</h1>
           <h2>Salesforce Developer - Administrator</h2>
-          <div class="redes">
-            <a href="https://www.salesforce.com/trailblazer/profile" target="_blank"><i class="fa-brands fa-salesforce"></i></a>
-            <a href="https://www.linkedin.com/in/joaquin-haro-filippon-a05967191/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://discord.com/users/335657955510714368" target="_blank"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://github.com/Keromon2k19" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://wa.me/542945699379" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
+        <section class="redes-conteiner">
+          <ul>
+            <li style="--color: #00a2e1">
+              <a href="https://www.salesforce.com/trailblazer/profile" target="_blank"><i class="fa-brands fa-salesforce"></i></a>
+              <span> <span class="popover above">Salesforce</span></span> 
+            </li>
+            <li style="--color: #0077b7">
+              <a href="https://www.linkedin.com/in/joaquin-haro-filippon-a05967191/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+              <span> <span class="popover above">Linkedin</span></span> 
+            </li>
+            <li style="--color: #5865f2">
+              <a href="https://discord.com/users/335657955510714368" target="_blank"><i class="fa-brands fa-discord"></i></a>
+              <span> <span class="popover above">Discord</span></span> 
+            </li>
+            <li style="--color: #fff">
+              <a href="https://github.com/Keromon2k19" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <span> <span class="popover above">GitHub</span></span> 
+            </li>
+            <li style="--color: #3ac14c">
+              <a href="https://wa.me/542945699379" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+              <span> <span class="popover above">whatsapp</span></span> 
+            </li>
+          </ul>
+        </section>
       </div>
-  </section>
+    </section>
 
     <!-- SECCION SOBRE MI -->
-    <section id="sobremi" class="sobremi">
+    <section id="sobremi" class="sobremi section-shadow">
       <div class="contenido-seccion">
         <h2>Sobre Mí</h2>
         <p>
@@ -134,26 +152,28 @@
                 <span>Sports</span>
               </div>
               <div class="interes qs">
-                <span> <span class="popover above">Brandon Sanderson and light novels</span></span>
-                <i class="fa-solid fa-book"></i>
-                <span>Libros</span>
+                <span> <span class="popover above">Hyouka, Haikyuu, Suzumuya haruhi.</span></span>
+                <i><img src="/Portfolio/img/icons8-noodles-64.png" alt=""></i>
+                <span>Anime</span>
               </div>
               <div class="interes qs">
                 <span> <span class="popover above">Love cats, mine's named Morfy</span></span>
-                <i class="fa-solid fa-cat"></i>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAACpElEQVR4nO3aT4hVZRwG4B+iiBMSKIjgFDZuLAgEN7WQNoK4SouEXLRQCtQiAxlpJaSLccpFQYsoWwQFuQkhJiFBBF0ZGCXkpjb9EcW/WQsb9InLHOJ6uefOdO+ce75vOM9yzntn7u89l3PnfOeLaDQajUajkTrsxZdYOcf8yiK/N3KHEdww4wesmCW/osgpXjcSOcM2DzsxS/5ER35b5AzvGsxk5AxTAxYwFTnDpQEL+DFyhmsDFnAtcoa7AxbwZ+QM023DfI01GO1ybSg7Nh05w+22YUbbfv5YRwFlx+5EznBxwAIuRs7wTtswU8VHvDXgNx0FlB07HDnD4/hbf/5q/2RkC/v7LGB/LBR4738O/34sFGbuCI/NcfDr2B25wyq8iA9xs2PIN/AtfsM9/I7TeBOPRo7wJF7Fp/ip1ymOhQKP4MBsA3fxNp7BaixqnfXiK/Bp7MBEa1EkUoYXcFV17iykK3o/rkSKcNRw/BKpwRY8GFIBlyIlZi5UfxieC5ESM1fuYTobqcDSIZ/9llORCrxk+L6KVOCLGgr4PFKAJbhVQwEfRwrwrHp8ECnAvpoKmIgU4JOaCjgUKcB3NRUwHilQzwWw5fUUhl9WwWBjxcrPuVly9S+LYd18T9/x+1vrf2Verm/yAjZVXMD5HtH6d4Zge8UFHO8R3VLf5AXsrLiA8R7RTVE37Kq4gOd7RDfWN3kBeyouYH2P6FNRN7xVcQGtG61/SqJr6xp6CZ7Ac61b0ioLKP7e5ZLo6ipXd8awGa/gID4qHlX93LGlZd51eT8nS6LLB/nvbawY8LXiKctnbQPeV6Mu73eyJLq43wJSd6Z9v3CPb5o9/Rbwq/T9t9yFDSWZ7/stYGsGJTz03A9HuuwnzHt/YKPRaDQajUZU6F+9SYrNPnRfPwAAAABJRU5ErkJggg==">
                 <span>Gatos</span>
               </div>
               <div class="interes qs">
                 <span> <span class="popover above">Your Turn To Roll!!</span></span>
-                <i class="fa-solid fa-dice-d20"></i>
+                <img src="data:image/png;base64,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">
                 <span>Rolplay D&D</span>
               </div>
             </div>
           </div>
         </div>
-          <button id="openModalBtn" class="button-shared">
-            Descargar CV <i class="fa-solid fa-download"></i>
-            <span class="overlay"></span>
+          <button id="openModalBtn" class="btn-modal">
+            <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Dowload Cv</span>
           </button>
           <div id="pdfModal" class="modal">
             <div class="modal-content">
@@ -166,87 +186,212 @@
 
     <!-- SECCION SKILLS -->
     <section class="skills" id="skills">
-      <div class="contenido-seccion">
-        <h2>Skills</h2>
-        <div class="fila">
-          <!-- Technical Skill -->
-          <div class="col">
-            <h3>Technical Skills</h3>
-            <div class="skill">
-              <span>Apex</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>75%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>HTML & CSS</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>80%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Photoshop</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>55%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Javascript</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>75%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Professional Skills -->
-          <div class="col">
-            <h3>Professional Skills</h3>
-            <div class="skill">
-              <span>Comunicación</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>80%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Trabajo en Equipo</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>90%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Creatividad</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>70%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Dedicación</span>
-              <div class="barra-skill">
-                <div class="progreso">
-                  <span>85%</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="container-bars">
+        <div class="bar-h2">
+          <h2 class="h2-skill">Skills</h2>
         </div>
-      </div>
-    </section>
-
+          <div class="container-bars-left">
+            <div class="bar-h3">
+              <h3 class="h3-ts">Technical Skills</h3>
+            </div>
+              <!-- Barra beginner -->
+              <span class="skills-name">Javascript</span>
+              <div class="bar bar-beginner">
+                <div style="--color-beginner: #00a2e1" class="stage">
+                  <p style="--color-beginner: #00a2e1 " class="">beginner</p>
+                </div>
+                <div style="--color-novice: #00a2e1" class="stage">
+                  <p style="--color-novice: #00a2e1" class="">novice</p>
+                </div>
+                <div style="--color-intermediate: #00a2e1" class="stage">
+                  <p style="--color-intermediate: #00a2e1" class="">intermediate</p>
+                </div>
+                <div style="--color-advanced: #00a2e1" class="stage">
+                  <p style="--color-advanced: #00a2e1" class="">advanced</p>
+                </div>
+                <div style="--color-master: #00a2e1" class="stage">
+                  <p style="--color-master: #00a2e1" class="">master</p>
+                </div>
+              </div>  
+              <!-- Barra Novice -->
+              <span class="skills-name">HTML & CSS</span>
+              <div class="bar bar-novice">
+                <div class="stage">
+                  <p style="--color-beginner: #00a2e1" class="">beginner</p>
+                  </div>
+                <div style="--color-novice: #553772" class="stage">
+                  <p style="--color-novice: #553772" class="">novice</p>
+                </div>
+                <div style="--color-intermediate: #8F3B76" class="stage">
+                  <p style="--color-intermediate: #8F3B76" class="">intermediate</p>
+                </div>
+                <div style="--color-advanced: #C7417B" class="stage">
+                  <p style="--color-advanced: #C7417B" class="">advanced</p>
+                </div>
+                <div style="--color-master: #F5487F" class="stage">
+                  <p style="--color-master: #F5487F" class="">master</p>
+                </div>
+              </div>
+              <!-- Barra Intermediate-->
+              <span class="skills-name">Photoshop</span>
+              <div class="bar bar-intermediate">
+                <div class="stage">
+                  <p style="--color-beginner: #00a2e1" class="">beginner</p>
+                  </div>
+                <div style="--color-novice: #553772" class="stage">
+                  <p style="--color-novice: #553772" class="">novice</p>
+                </div>
+                <div style="--color-intermediate: #8F3B76" class="stage">
+                  <p style="--color-intermediate: #8F3B76" class="">intermediate</p>
+                </div>
+                <div style="--color-advanced: #C7417B" class="stage">
+                  <p style="--color-advanced: #C7417B" class="">advanced</p>
+                </div>
+                <div style="--color-master: #F5487F" class="stage">
+                  <p style="--color-master: #F5487F" class="">master</p>
+                </div>
+              </div>
+              <!-- Barra advanced -->
+              <span class="skills-name">Apex</span>
+              <div class="bar bar-advanced">
+                <div class="stage">
+                  <p style="--color-beginner: #00a2e1" class="">beginner</p>
+                  </div>
+                <div style="--color-novice: #553772" class="stage">
+                  <p style="--color-novice: #553772" class="">novice</p>
+                </div>
+                <div style="--color-intermediate: #8F3B76" class="stage">
+                  <p style="--color-intermediate: #8F3B76" class="">intermediate</p>
+                </div>
+                <div style="--color-advanced: #C7417B" class="stage">
+                  <p style="--color-advanced: #C7417B" class="">advanced</p>
+                </div>
+                <div style="--color-master: #F5487F" class="stage">
+                  <p style="--color-master: #F5487F" class="">master</p>
+                </div>
+              </div>
+              <!-- Barra Master -->
+              <div class="bar bar-master">
+                <div class="stage">
+                  <p style="--color-beginner: #00a2e1" class="">beginner</p>
+                  </div>
+                <div style="--color-novice: #553772" class="stage">
+                  <p style="--color-novice: #553772" class="">novice</p>
+                </div>
+                <div style="--color-intermediate: #8F3B76" class="stage">
+                  <p style="--color-intermediate: #8F3B76" class="">intermediate</p>
+                </div>
+                <div style="--color-advanced: #C7417B" class="stage">
+                  <p style="--color-advanced: #C7417B" class="">advanced</p>
+                </div>
+                <div style="--color-master: #F5487F" class="stage">
+                  <p style="--color-master: #F5487F" class="">master</p>
+                </div>
+              </div>
+          </div>
+          <div class="container-bars-right">
+            <div class="bar-h3">
+              <h3 class="h3-ps">Professional Skills</h3>
+            </div>
+            <!-- Barra beginner -->
+            <span class="skills-name">Comunicación</span>
+            <div class="bar bar-beginner" >
+              <div class="stage">
+                <p style="--color-beginner: #00a2e1" class="">beginner</p>
+                </div>
+              <div style="--color-novice: #553772" class="stage">
+                <p style="--color-novice: #553772" class="">novice</p>
+              </div>
+              <div style="--color-intermediate: #8F3B76" class="stage">
+                <p style="--color-intermediate: #8F3B76" class="">intermediate</p>
+              </div>
+              <div style="--color-advanced: #C7417B" class="stage">
+                <p style="--color-advanced: #C7417B" class="">advanced</p>
+              </div>
+              <div style="--color-master: #F5487F" class="stage">
+                <p style="--color-master: #F5487F" class="">master</p>
+              </div>
+            </div>  
+            <!-- Barra Novice -->
+            <span class="skills-name">Trabajo en Equipo</span>  
+            <div class="bar bar-novice">
+              <div class="stage">
+                <p style="--color-beginner: #00a2e1" class="">beginner</p>
+                </div>
+              <div style="--color-novice: #553772" class="stage">
+                <p style="--color-novice: #553772" class="">novice</p>
+              </div>
+              <div style="--color-intermediate: #8F3B76" class="stage">
+                <p style="--color-intermediate: #8F3B76" class="">intermediate</p>
+              </div>
+              <div style="--color-advanced: #C7417B" class="stage">
+                <p style="--color-advanced: #C7417B" class="">advanced</p>
+              </div>
+              <div style="--color-master: #F5487F" class="stage">
+                <p style="--color-master: #F5487F" class="">master</p>
+              </div>
+            </div>
+            <!-- Barra Intermediate-->
+            <span class="skills-name">Creatividad</span>
+            <div class="bar bar-intermediate">
+              <div class="stage">
+                <p style="--color-beginner: #00a2e1" class="">beginner</p>
+                </div>
+              <div style="--color-novice: #553772" class="stage">
+                <p style="--color-novice: #553772" class="">novice</p>
+              </div>
+              <div style="--color-intermediate: #8F3B76" class="stage">
+                <p style="--color-intermediate: #8F3B76" class="">intermediate</p>
+              </div>
+              <div style="--color-advanced: #C7417B" class="stage">
+                <p style="--color-advanced: #C7417B" class="">advanced</p>
+              </div>
+              <div style="--color-master: #F5487F" class="stage">
+                <p style="--color-master: #F5487F" class="">master</p>
+              </div>
+            </div>
+            <!-- Barra advanced -->
+            <span class="skills-name">Dedicación</span>
+            <div class="bar bar-advanced">
+              <div class="stage">
+                <p style="--color-beginner: #00a2e1" class="">beginner</p>
+                </div>
+              <div style="--color-novice: #553772" class="stage">
+                <p style="--color-novice: #553772" class="">novice</p>
+              </div>
+              <div style="--color-intermediate: #8F3B76" class="stage">
+                <p style="--color-intermediate: #8F3B76" class="">intermediate</p>
+              </div>
+              <div style="--color-advanced: #C7417B" class="stage">
+                <p style="--color-advanced: #C7417B" class="">advanced</p>
+              </div>
+              <div style="--color-master: #F5487F" class="stage">
+                <p style="--color-master: #F5487F" class="">master</p>
+              </div>
+            </div>
+            <!-- Barra Master -->
+            <!-- <div class="bar bar-master">
+              <div class="stage">
+                <p style="--color-beginner: #00a2e1" class="">beginner</p>
+                </div>
+              <div style="--color-novice: #553772" class="stage">
+                <p style="--color-novice: #553772" class="">novice</p>
+              </div>
+              <div style="--color-intermediate: #8F3B76" class="stage">
+                <p style="--color-intermediate: #8F3B76" class="">intermediate</p>
+              </div>
+              <div style="--color-advanced: #C7417B" class="stage">
+                <p style="--color-advanced: #C7417B" class="">advanced</p>
+              </div>
+              <div style="--color-master: #F5487F" class="stage">
+                <p style="--color-master: #F5487F" class="">master</p>
+              </div>
+            </div> -->
+        </div>
+        </div>
+      </section>
     <!-- SECCION CURRICULUM -->
-    <section id="curriculum" class="curriculum">
+    <section id="curriculum" class="curriculum section-shadow">
       <div class="contenido-seccion">
         <h2>Curriculum</h2>
         <div class="fila">
@@ -262,9 +407,11 @@
                 impedit, nostrum temporibus veritatis eaque soluta aperiam id
                 repudiandae fugiat deserunt! Explicabo, veritatis?
               </p>
-              <button id="openModalBtnCurriculum" class="button-shared">
-                Certificate <i class="fa-solid fa-download"></i>
-                <span class="overlay"></span>
+              <button id="openModalBtnCurriculum" class="btn-modal">
+                <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Certificate</span>
               </button>
               <div id="pdfModal" class="modal">
                 <div class="modal-content">
@@ -286,9 +433,11 @@
                 impedit, nostrum temporibus veritatis eaque soluta aperiam id
                 repudiandae fugiat deserunt! Explicabo, veritatis?
               </p>
-                <button id="openModalBtnCurriculum2" class="button-shared">
-                  Certificate <i class="fa-solid fa-download"></i>
-                  <span class="overlay"></span>
+                <button id="openModalBtnCurriculum2" class="btn-modal">
+                  <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text">Certificate</span>
                 </button>
               <div class="conectori">
                 <div class="circuloi"></div>
@@ -304,10 +453,12 @@
                 impedit, nostrum temporibus veritatis eaque soluta aperiam id
                 repudiandae fugiat deserunt! Explicabo, veritatis?
               </p>
-                <button id="openModalBtnCurriculum3" class="button-shared">
-                  Certificate <i class="fa-solid fa-download"></i>
-                  <span class="overlay"></span>
-                </button>
+              <button id="openModalBtnCurriculum3" class="btn-modal">
+                <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Certificate</span>
+              </button>
               <div class="conectori">
                 <div class="circuloi"></div>
               </div>
@@ -363,80 +514,74 @@
       </div>
     </section>
 
-    <!-- SECCION PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
-      <div class="contenido-seccion">
-        <h2>PORTFOLIO</h2>
-        <div class="galeria">
-          <div class="proyecto">
-            <img src="img/p1.jpg" alt="" />
-            <div class="overlay">
-              <h3>Diseño Creativo</h3>
-              <p>Fotografía</p>
-            </div>
+  <!-- SECCION PORTFOLIO -->
+  
+    <section id="portfolio" class="portfolio section-shadow">
+      <div class="card-grid">
+        <a class="card" href="#">
+          <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
+          <div class="card__content">
+            <p class="card__category">Category</p>
+            <h3 class="card__heading">Example Card Heading</h3>
           </div>
-          <div class="proyecto">
-            <img src="img/p2.jpg" alt="" />
-            <div class="overlay">
-              <h3>Diseño Creativo</h3>
-              <p>Fotografía</p>
-            </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+          <div class="card__content">
+            <p class="card__category">Category</p>
+            <h3 class="card__heading">Example Card Heading</h3>
           </div>
-          <div class="proyecto">
-            <img src="img/p3.jpg" alt="" />
-            <div class="overlay">
-              <h3>Diseño Creativo</h3>
-              <p>Fotografía</p>
-            </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+          <div class="card__content">
+            <p class="card__category">Category</p>
+            <h3 class="card__heading">Example Card Heading</h3>
           </div>
-          <div class="proyecto">
-            <img src="img/p4.jpg" alt="" />
-            <div class="overlay">
-              <h3>Diseño Creativo</h3>
-              <p>Fotografía</p>
-            </div>
+        </li>
+        <a class="card" href="#">
+          <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+          <div class="card__content">
+            <p class="card__category">Category</p>
+            <h3 class="card__heading">Example Card Heading</h3>
           </div>
-          <div class="proyecto">
-            <img src="img/p5.jpg" alt="" />
-            <div class="overlay">
-              <h3>Diseño Creativo</h3>
-              <p>Fotografía</p>
-            </div>
-          </div>
-          <div class="proyecto">
-            <img src="img/p6.jpg" alt="" />
-            <div class="overlay">
-              <h3>Diseño Creativo</h3>
-              <p>Fotografía</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        </a>
+      <div>
     </section>
 
     <!-- SECCION CONTACTO -->
-    <section id="contacto" class="contacto">
+    <section id="contacto" class="contacto section-shadow">
       <div class="contenido-seccion">
-        <h2>CONTACTO</h2>
+        <h2>Contact Me!</h2>
         <div class="fila">
           <!-- Formulario -->
-          <div class="col">
-            <input class="placeholder1" type="text" placeholder="Tú Nombre" />
-            <input class="placeholder2" type="text" placeholder="Número telefónico" />
-            <input class="placeholder3" type="text" placeholder="Dirección de correo" />
-            <input class="placeholder4" type="text" placeholder="Tema" />
-            <textarea
-              name=""
-              id=""
-              cols="4"
-              rows="10"
-              placeholder="Mensaje"
-            ></textarea>
-            <button>
-              Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-              <span class="overlay"></span>
-            </button>
-          </div>
+          <form>
+            <div class="col">
+              <div class="inp">
+                <input class="input-animate" type="text" id="name" name="name" required required>
+                <span class="input-span">Enter Name</span>
+              </div>
+              <div class="inp">
+                <input class="input-animate"  type="email" id="email" name="email" required>
+                <span class="input-span">Enter Email</span>
+              </div>
+              <div class="inp">
+                <textarea class="input-animate" required
+                name=""
+                id=""
+                cols="4"
+                rows="10"
+                ></textarea>
+                <span class="input-span">Enter Messege</span>
+              </div>
+              <button type="submit" id="hire-btn" class="btn-modal">
+                <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Hire me!</span>
+              </button>
+            </div>
+          </form>         
         </div>
       </div>
     </section>
@@ -445,18 +590,33 @@
       <a href="#inicio" class="arriba">
         <i class="fa-solid fa-angles-up"></i>
       </a>
-      <div class="redes">
-        <a href="https://www.salesforce.com/trailblazer/profile" target="_blank"><i class="fa-brands fa-salesforce"></i></a>
-        <a href="https://www.linkedin.com/in/joaquin-haro-filippon-a05967191/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://discord.com/users/335657955510714368" target="_blank"><i class="fa-brands fa-discord"></i></a>
-        <a href="https://github.com/Keromon2k19" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://wa.me/542945699379" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
+      <section class="redes-conteiner">
+        <ul>
+          <li style="--color: #00a2e1">
+            <a href="https://www.salesforce.com/trailblazer/profile" target="_blank"><i class="fa-brands fa-salesforce"></i></a>
+            <span> <span class="popover above">Salesforce</span></span> 
+          </li>
+          <li style="--color: #0077b7">
+            <a href="https://www.linkedin.com/in/joaquin-haro-filippon-a05967191/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <span> <span class="popover above">Linkedin</span></span> 
+          </li>
+          <li style="--color: #5865f2">
+            <a href="https://discord.com/users/335657955510714368" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            <span> <span class="popover above">Discord</span></span> 
+          </li>
+          <li style="--color: #fff">
+            <a href="https://github.com/Keromon2k19" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <span> <span class="popover above">GitHub</span></span> 
+          </li>
+          <li style="--color: #3ac14c">
+            <a href="https://wa.me/542945699379" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <span> <span class="popover above">whatsapp</span></span> 
+          </li>
+        </ul>
+      </section>
     </footer>
 
     <div id="app-cover">
-      <div id="bg-artwork"></div>
-      <div id="bg-layer"></div>
       <div id="player">
         <div id="player-track">
           <div id="album-name"></div>
@@ -502,7 +662,6 @@
         </div>
       </div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
