@@ -18,16 +18,16 @@
   <body>
       
     <!-- LOADER -->
-    <div id="loader-wrapper">
+    <!-- <div id="loader-wrapper">
       <div class="loader-logo">
         <img class="logo-img" src="/img/wings kero logo final white.png" alt="Logo">
       </div>
       <div id="loader"></div>
       <div class="loader-section section"></div>
-    </div>
+    </div> -->
   
     <!-- MENU ENCABEZADO -->
-    <div class="contenedor-header">
+    <div class="container-header">
       <header>
         <div class="logo">
           <a href="#">
@@ -37,7 +37,7 @@
         <nav id="nav">
           <ul>
             <li><a href="#inicio" onclick="seleccionar()">Home</a></li>
-            <li><a href="#sobremi" onclick="seleccionar()">About Me</a></li>
+            <li><a href="#aboutme" onclick="seleccionar()">About Me</a></li>
             <li><a href="#skills" onclick="seleccionar()">Skills</a></li>
             <li><a href="#curriculum" onclick="seleccionar()">Curriculum</a></li>
             <li><a href="#portfolio" onclick="seleccionar()">Projects</a></li>
@@ -53,7 +53,7 @@
     <!-- SECCION INICIO -->
     <section id="inicio" class="inicio section-shadow">
       <div class="cont-bg"><img class="inicio-bg"></div>
-      <div class="contenido-banner">
+      <div class="content-banner">
           <div class="contenedor-img">
               <img src="/img/hero.png" alt="" />
           </div>
@@ -87,28 +87,30 @@
     </section>
 
     <!-- SECCION SOBRE MI -->
-    <section id="sobremi" class="sobremi section-shadow">
+    <section id="aboutme" class="aboutme section-shadow">
       <div class="contenido-seccion">
-        <h2>Sobre Mí</h2>
+        <h2>About Me</h2>
         <p>
-          <span>Hi,I'm Joaquin Haro Filippon.</span>I am a Salesforce developer with experience in computer repair and customer service. My passion for
-          learning, problem-solving, and collaborating with other professionals drives me continuously. I am an
-          adaptable individual who makes decisions with initiative and confidence. Additionally, I possess lateral
-          thinking skills that enable me to find creative and innovative solutions. My goal is to continue growing
-          professionally and add value to the companies I work with.
+          <span>Hi,I'm Joaquin Haro Filippon.</span> 
+          a Salesforce developer with a diverse background. I bring a unique blend of experience in computer repair and customer service to my work.
+          I'm not just a tech enthusiast; I'm an individual with a deep passion for learning, problem-solving, and collaborating with other professionals. I thrive on challenges and make decisions with initiative and confidence, ensuring that every task is approached with dedication.
+          Beyond the world of technology, you'll often find me pursuing my various interests. I love the great outdoors, and hiking is a personal favorite. When it comes to sports, I enjoy a spirited game of volleyball. I'm also an avid archer, an anime enthusiast, and a dedicated gamer. My friends and I share a love for role-playing games like Dungeons and Dragons, where we explore imaginative worlds and stories.
+          I'm an ardent admirer of cats, which is evident from the photography work I indulge in. The photos you see, including the ones of my beloved cat Morfy, were taken by me. I appreciate the art of capturing moments.
+          Moreover, I have a deep interest in documentaries, especially those that explore the world and its diverse cultures. They allow me to gain insights into the lives and traditions of people from different corners of the globe. My diverse interests and experiences have shaped me into an adaptable individual with a strong desire for professional growth and the ability to bring value to the companies I work with.
+         <br>
+          <span> Let's connect and explore opportunities together!</span>
         </p>
-
-        <div class="fila">
+        <div class="row">
           <!-- datos personales -->
           <div class="col">
-            <h3>Datos Personales</h3>
+            <h3>Personal Info</h3>
             <ul>
               <li>
-                <strong>Cumpleaños</strong>
-                11-08-1995
+                <strong>Birthday</strong>
+                08/11/1995
               </li>
               <li>
-                <strong>Teléfono</strong>
+                <strong>Phone</strong>
                 <a href="https://wa.me/542945699379" target="_blank" class="whatsapp-link">+54 2945 699379</a>
               </li>
               <li>
@@ -117,14 +119,14 @@
               </li>
               <li>
                 <strong>Website</strong>
-                <link rel="stylesheet" href="https://kero2-dev-ed.develop.builder.salesforce-experience.com/sfsites/picasso/core/config/commeditor.jsp"> Salesforce Portfolio
+                <a href="https://kero2-dev-ed.develop.builder.salesforce-experience.com/sfsites/picasso/core/config/commeditor.jsp" target="_blank">Salesforce Portfolio</a>
               </li>
             </ul>
           </div>
             
-          <!-- intereses -->
+           <!-- Interests -->
           <div class="col intereses-col">
-            <h3>Intereses</h3>
+            <h3>Interests</h3>
             <div class="contenedor-intereses">
               <div class="interes qs">
                 <span> <span class="popover above">CS:GO, Hollow Knight, Rocket League!</span></span>
@@ -153,18 +155,18 @@
               </div>
               <div class="interes qs">
                 <span> <span class="popover above">Hyouka, Haikyuu, Suzumuya haruhi.</span></span>
-                <i><img src="/Portfolio/img/icons8-noodles-64.png" alt=""></i>
+                <i><img src="/img/icons8-noodles-64.png"></i>
                 <span>Anime</span>
               </div>
               <div class="interes qs">
                 <span> <span class="popover above">Love cats, mine's named Morfy</span></span>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAACpElEQVR4nO3aT4hVZRwG4B+iiBMSKIjgFDZuLAgEN7WQNoK4SouEXLRQCtQiAxlpJaSLccpFQYsoWwQFuQkhJiFBBF0ZGCXkpjb9EcW/WQsb9InLHOJ6uefOdO+ce75vOM9yzntn7u89l3PnfOeLaDQajUajkTrsxZdYOcf8yiK/N3KHEdww4wesmCW/osgpXjcSOcM2DzsxS/5ER35b5AzvGsxk5AxTAxYwFTnDpQEL+DFyhmsDFnAtcoa7AxbwZ+QM023DfI01GO1ybSg7Nh05w+22YUbbfv5YRwFlx+5EznBxwAIuRs7wTtswU8VHvDXgNx0FlB07HDnD4/hbf/5q/2RkC/v7LGB/LBR4738O/34sFGbuCI/NcfDr2B25wyq8iA9xs2PIN/AtfsM9/I7TeBOPRo7wJF7Fp/ip1ymOhQKP4MBsA3fxNp7BaixqnfXiK/Bp7MBEa1EkUoYXcFV17iykK3o/rkSKcNRw/BKpwRY8GFIBlyIlZi5UfxieC5ESM1fuYTobqcDSIZ/9llORCrxk+L6KVOCLGgr4PFKAJbhVQwEfRwrwrHp8ECnAvpoKmIgU4JOaCjgUKcB3NRUwHilQzwWw5fUUhl9WwWBjxcrPuVly9S+LYd18T9/x+1vrf2Verm/yAjZVXMD5HtH6d4Zge8UFHO8R3VLf5AXsrLiA8R7RTVE37Kq4gOd7RDfWN3kBeyouYH2P6FNRN7xVcQGtG61/SqJr6xp6CZ7Ac61b0ioLKP7e5ZLo6ipXd8awGa/gID4qHlX93LGlZd51eT8nS6LLB/nvbawY8LXiKctnbQPeV6Mu73eyJLq43wJSd6Z9v3CPb5o9/Rbwq/T9t9yFDSWZ7/stYGsGJTz03A9HuuwnzHt/YKPRaDQajUZU6F+9SYrNPnRfPwAAAABJRU5ErkJggg==">
-                <span>Gatos</span>
-              </div>
-              <div class="interes qs">
-                <span> <span class="popover above">Your Turn To Roll!!</span></span>
-                <img src="data:image/png;base64,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">
-                <span>Rolplay D&D</span>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAACpElEQVR4nO3aT4hVZRwG4B+iiBMSKIjgFDZuLAgEN7WQNoK4SouEXLRQCtQiAxlpJaSLccpFQYsoWwQFuQkhJiFBBF0ZGCXkpjb9EcW/WQsb9InLHOJ6uefOdO+ce75vOM9yzntn7u89l3PnfOeLaDQajUajkTrsxZdYOcf8yiK/N3KHEdww4wesmCW/osgpXjcSOcM2DzsxS/5ER35b5AzvGsxk5AxTAxYwFTnDpQEL+DFyhmsDFnAtcoa7AxbwZ+QM023DfI01GO1ybSg7Nh05w+22YUbbfv5YRwFlx+5EznBxwAIuRs7wTtswU8VHvDXgNx0FlB07HDnD4/hbf/5q/2RkC/v7LGB/LBR4738O/34sFGbuCI/NcfDr2B25wyq8iA9xs2PIN/AtfsM9/I7TeBOPRo7wJF7Fp/ip1ymOhQKP4MBsA3fxNp7BaixqnfXiK/Bp7MBEa1EkUoYXcFV17iykK3o/rkSKcNRw/BKpwRY8GFIBlyIlZi5UfxieC5ESM1fuYTobqcDSIZ/9llORCrxk+L6KVOCLGgr4PFKAJbhVQwEfRwrwrHp8ECnAvpoKmIgU4JOaCjgUKcB3NRUwHilQzwWw5fUUhl9WwWBjxcrPuVly9S+LYd18T9/x+1vrf2Verm/yAjZVXMD5HtH6d4Zge8UFHO8R3VLf5AXsrLiA8R7RTVE37Kq4gOd7RDfWN3kBeyouYH2P6FNRN7xVcQGtG61/SqJr6xp6CZ7Ac61b0ioLKP7e5ZLo6ipXd8awGa/gID4qHlX93LGlZd51eT8nS6LLB/nvbawY8LXiKctnbQPeV6Mu73eyJLq43wJSd6Z9v3CPb5o9/Rbwq/T9t9yFDSWZ7/stYGsGJTz03A9HuuwnzHt/YKPRaDQajUZU6F+9SYrNPnRfPwAAAABJRU5ErkJggg==">
+                  <span>Cats!</span>
+                </div>
+                <div class="interes qs">
+                  <span> <span class="popover above">Your Turn To Roll!!</span></span>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAIF0lEQVR4nOWbB4wVVRSGZxdwlS4iiogFAXtAEZVoQBEsa5Rgiya2iIDRWAIIJiZSVBBLRE1UFLEFomhsoJgoKrFARLGComIBC20RkGL/zPH9g5dh3nt35s1blvUkk307c9v559zT7pkg2IYEDLAr+L8R0AF4Hlily353COo7ATsBo8S0/b0RGANcrXt3AU2D+kjAacA3wHRgL90zEEbp9x7AY8BS4EKgIqgPBOwPvAx8BvSNPNsMgHOvJ/Ah8DpwaLC9EtBUDC6TiDeMabMVALpfKSn4UduiRbC9EFDhLN5Euk2BtrEAOM9bCYDlArEyqMsEHA68DcwDjvZoXxAAp91hwFvAe0CPoK4R/72p74FBvm/KFwBHss4GvpNk7RZsawIaiuGf0uzVJAA4fZo4umUEsEOwLQjoBXwEvAYcknKMxAA4fTsDLwGfAycGtUVE7HWJY6UGIOJffC3/Yu9SxipIQCNpYtPIt2ThsWUBgONh2nZYoTF3LHXMLQjoAywUyvsGGVFWADjj7Snp/NIUZhYDdhTTXwDVmayyjAA44/YGPgVeAQ5MM0DjSNBSlUcb76bIrpuUYjVwjizDEOAGYDwwEZiqqG+W7PkiYKOuRbo3S22mqs94jTFEY56jOXppzg5aQ5MCW3alLFQzX+YvAH4BFgMzheI8+fJLgNXkaL30wWItfjbwIvCkFn8HMBoYrsWfB5yut9NNjKzVVa17vdXmPPUZrjHu0JhPao7ZmnOx1mBrQWtborXO09pnqp3xdIEPAFP0VgyI/tr/3U2UgPbAzllEasALwLW6XshgvAqtrb3W2l1r7y9ejKcpPgONlOgXdWVLWGxfKaoqc2Rky08p43w9JB2jfAF42QutdItpJIar4wAp05xTxdNIXwDGSgralWExw4AZMfdnAEPLMF9boAYYlwSAUcA9poAyXkwbOSv7xzzbTxq7bcZzWsrtbvGUCIBOCjgy86qAyWbaCjy/FXgow/mqFKgdkBiAIPfbTMhFGS2mm5IkeSNGs9UKqY/MaM6LLWDS71QAVAPzMzJRb/qAaW2AORmZ2nmhdUkLQIU09jElLuQiOS5FEyWac04GkeaxcuErUwNgBFwFPBGkJEesj0qxXZqXMK95jVc6/6cGoJlM4p4pF2L+/OQU/R62sLuEnEWNC2BqAIyACcBNQUIqxbQpyDGT2TlF35uBOyP3SgKgo4KOnRIuxJybYUn6xDhN01Oavs6ZAeAwc0mQzt8/GLheEd2AOCDlJF0HTLJ5FCOEcYJ3LkLjbwVaKVagUr9PAj7wXMTmhWu8DcAfwN8KS5e6bjbQBfgZ2OSE2p9I/ySKE2RtTswKgGEWrjpgWFqsp6/oSpuHsbox/rvCUgPjVbWtkpUwcNYBvwqITWFA5hsnKFGyKM6HSAvAyIhFuAJ4yld5Aa31e7XeZHM5RH+L0ZbA+WJ8ozR/GyUwjH6TRvdSpsDTwOV5nmUCQGMxtE+B/g+7/r4OTzYfjALXiPm1Ev1HxKzd21VtztXzNcAZPubUjtwFUtMsARgADIw8t/TUuDT+vgEnaxK+Xdvj7+r/FU67TpKK30IrUsyhUqr+9gJ8lWYFIkysjCYipSPm5nNh7axfzsmfEve7dd8OU41qnLYHSgJMKq4u5lLrXGB5oTKbzAAwUuZ2oK+/r6KHddr765UP/HdbAA/o/qZwa9nYUpq2BU6LCaq2AFkJ1Oei85YTgD7Ku1cUE0/bw44l2KDzvI7hoSbQzxF3y+IeLT0TmsNmxbaZzihPqDUAjICPgeOdRMbkPECFzP+lt7pWDC+TVbBqkAXO1lgjM2lg3RYdM5pYUSp9QbHwuRwAXAY8U8hEKZI0RuJoQ7hnpcG/Ezi/CyiTlEZFUmtmap8FBnusN3MAmojxd0JnKY9HOFgHl9Hr1EjbKhVADA0ly8PZeidOIdcWALtatkh7d5b2b9Jrvq40fV/V3O+H/kOtAEDOnE2SdzdFojha+z3pdaauNH1Ha+4pWsukQmV1pYbDlZp0ukJNG6y1nnWRDT44qN3aQ5vzCP3fQgehS1RMZVupQRaeYFPZ2IUStUFxaXL584tqo55Pa1oQF5rr1OlsOVdfSde0TAPABLmWK/XW+3j0u9+ckXKWuMoRmgbc59G2m4olapSHuMcXgMdliu4Na3o9F9dI4jc8KBPpjc5NcoYoE3uveHrct+ZvrBKhY3xMTOQczjzCk3z7JBjbHJ4fkiRnZarHiBfjqVWSCdtJdJZq7zfw7He8FFSWtUTtpXz7Jiyq/EZbJm/4XpRM0yoAed8nG+Q4KfOTJlHzjFWlkNnr5NiO1eQgvVvqgU6herwOHm/ADiYeCEok4EG53BUeUlLe7w34rx4v/LqjeRFzZRHjpSXMN1DJ1eYepbOrsqpfLErK0010ythj9YNzxN69+KixFeLL85W5Od8U/KB97m2xsi6Pny3H5OQ8bazq61sffz1iiWy7nZnn+XGWopdJ3Pbl8+T0w2Lph44xz8cqYCpqSfRmrZ7n5jw2/TGFznXruyJyoa9bmNgywtTMfMnUyDjjFek1iPn8ZlVZaoGzJGCXyGcuDR2xNik5q0DfftourWO+HbI3v3uwvRC5zO5Lqtr8N/kBdBUwB8W07xyJ8E5wvkfoGmyvRC6MXqAkxiGq2tzCtDkR3gABMU3VHaVXfNcFIhcohZ/WmPl8VLm8CifCmyw7Hn4KU5aiybrycdUK7fUROhL/WuJf8DO7ekPk6gXeUCr8T/3eSi/UeyJXvrqVva9N+gfEvNU28of79QAAAABJRU5ErkJggg==">
+                  <span>Rolplay D&D</span>
               </div>
             </div>
           </div>
@@ -178,7 +180,7 @@
           <div id="pdfModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <iframe class="pdfiframe" id="pdfViewer" src="../Joaquin Haro Filippon Resume.pdf " style="width:100%; height:800px;" frameborder="0"></iframe>
+                <iframe class="pdfiframe" id="pdfViewer" src="/Documents/Joaquin Haro Filippon Resume.pdf" style="width:100%; height:800px;" frameborder="0"></iframe>
             </div>
         </div>
       </div>
@@ -196,7 +198,7 @@
             </div>
               <!-- Barra beginner -->
               <span class="skills-name">Javascript</span>
-              <div class="bar bar-beginner">
+              <div class="bar bar-novice">
                 <div style="--color-beginner: #00a2e1" class="stage">
                   <p style="--color-beginner: #00a2e1 " class="">beginner</p>
                 </div>
@@ -215,7 +217,7 @@
               </div>  
               <!-- Barra Novice -->
               <span class="skills-name">HTML & CSS</span>
-              <div class="bar bar-novice">
+              <div class="bar bar-intermediate">
                 <div class="stage">
                   <p style="--color-beginner: #00a2e1" class="">beginner</p>
                   </div>
@@ -253,7 +255,7 @@
               </div>
               <!-- Barra advanced -->
               <span class="skills-name">Apex</span>
-              <div class="bar bar-advanced">
+              <div class="bar bar-novice">
                 <div class="stage">
                   <p style="--color-beginner: #00a2e1" class="">beginner</p>
                   </div>
@@ -271,7 +273,7 @@
                 </div>
               </div>
               <!-- Barra Master -->
-              <div class="bar bar-master">
+              <!-- <div class="bar bar-master">
                 <div class="stage">
                   <p style="--color-beginner: #00a2e1" class="">beginner</p>
                   </div>
@@ -287,7 +289,7 @@
                 <div style="--color-master: #F5487F" class="stage">
                   <p style="--color-master: #F5487F" class="">master</p>
                 </div>
-              </div>
+              </div> -->
           </div>
           <div class="container-bars-right">
             <div class="bar-h3">
@@ -295,7 +297,7 @@
             </div>
             <!-- Barra beginner -->
             <span class="skills-name">Comunicación</span>
-            <div class="bar bar-beginner" >
+            <div class="bar bar-advanced" >
               <div class="stage">
                 <p style="--color-beginner: #00a2e1" class="">beginner</p>
                 </div>
@@ -314,7 +316,7 @@
             </div>  
             <!-- Barra Novice -->
             <span class="skills-name">Trabajo en Equipo</span>  
-            <div class="bar bar-novice">
+            <div class="bar bar-advanced">
               <div class="stage">
                 <p style="--color-beginner: #00a2e1" class="">beginner</p>
                 </div>
@@ -352,7 +354,7 @@
             </div>
             <!-- Barra advanced -->
             <span class="skills-name">Dedicación</span>
-            <div class="bar bar-advanced">
+            <div class="bar bar-master">
               <div class="stage">
                 <p style="--color-beginner: #00a2e1" class="">beginner</p>
                 </div>
@@ -394,19 +396,28 @@
     <section id="curriculum" class="curriculum section-shadow">
       <div class="contenido-seccion">
         <h2>Curriculum</h2>
-        <div class="fila">
+        <div class="row">
           <div class="col izquierda">
             <h3>Educación</h3>
             <div class="item izq">
               <h4>Curso Introductorio JavaScript</h4>
               <span class="casa">Plataforma 5</span>
-              <span class="fecha">2022 - 2022</span>
+              <span class="fecha">Enero 2023</span>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis,
-                cumque repellat, tempora recusandae aliquam nemo esse natus
-                impedit, nostrum temporibus veritatis eaque soluta aperiam id
-                repudiandae fugiat deserunt! Explicabo, veritatis?
+                Successfully completed an introductory programming 
+                course where I gained proficiency in:
               </p>
+              <dl>
+                <dt>Development and Programming:</dt>
+                  <dd>
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>Bootstrap</li>
+                    </ul>
+                  </dd>
+              </dl>
               <button id="openModalBtnCurriculum" class="btn-modal">
                 <span class="circle" aria-hidden="true">
                   <span class="icon arrow"></span>
@@ -416,7 +427,7 @@
               <div id="pdfModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <iframe class="pdfiframe" id="pdfViewer" src="../Mayo 2023_JOAQUIN HARO FILIPPON_Certificado Salesforce Bootcamp(P5).pdf" style="width:100%; height:800px;" frameborder="0"></iframe>
+                    <iframe class="pdfiframe" id="pdfViewer" src="/Documents/JOAQUIN HARO FILIPPON - CIntro.pdf" style="width:100%; height:800px;" frameborder="0"></iframe>
                 </div>
               </div>
               <div class="conectori">
@@ -426,13 +437,42 @@
             <div class="item izq">
               <h4>Salesforce Full Stack Developer</h4>
               <span class="casa">CluodGaia & Plataforma 5</span>
-              <span class="fecha">2023 - 2023</span>
+              <span class="fecha">February 2023 - May 2023 +800 hours.</span>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis,
-                cumque repellat, tempora recusandae aliquam nemo esse natus
-                impedit, nostrum temporibus veritatis eaque soluta aperiam id
-                repudiandae fugiat deserunt! Explicabo, veritatis?
+                Completed an intensive bootcamp program, dedicating over 9 hours of 
+                study and project work from Monday to Friday. 
+                Progress was made in the Trailhead platform, earning Superbadges along the way.
               </p>
+              <dl>
+                <dt>Development and Programming:</dt>
+                <dd>
+                  <ul>
+                    <li>Apex</li>
+                    <li>Lightning Web Components (LWC)</li>
+                    <li>SQL</li>
+                    <li>GitHub</li>
+                    <li>Visual Studio Code</li>
+                  </ul>
+                </dd>
+                <dt>Automation and Flows:</dt>
+                <dd>
+                  <ul>
+                    <li>Declarative Tools in Salesforce:</li>
+                    <ul>
+                      <li>Flows</li>
+                      <li>Screenflows</li>
+                      <li>Record-Triggered Flows</li>
+                    </ul>
+                  </ul>
+                </dd>
+                <dt>Project Management Methodologies:</dt>
+                <dd>
+                  <ul>
+                    <li>SCRUM</li>
+                    <li>Trello</li>
+                  </ul>
+                </dd>
+              </dl>
                 <button id="openModalBtnCurriculum2" class="btn-modal">
                   <span class="circle" aria-hidden="true">
                     <span class="icon arrow"></span>
@@ -448,10 +488,11 @@
               <span class="casa">Associate</span>
               <span class="fecha">2023 - 2023</span>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis,
-                cumque repellat, tempora recusandae aliquam nemo esse natus
-                impedit, nostrum temporibus veritatis eaque soluta aperiam id
-                repudiandae fugiat deserunt! Explicabo, veritatis?
+                Obtained Salesforce Associate certification, 
+                showcasing proficiency in Salesforce CRM. 
+                Enhanced customer engagement, 
+                optimized business processes, 
+                and contributed valuable insights.
               </p>
               <button id="openModalBtnCurriculum3" class="btn-modal">
                 <span class="circle" aria-hidden="true">
@@ -468,42 +509,52 @@
           <div class="col derecha">
             <h3>Experiencia de trabajo</h3>
             <div class="item der">
-              <h4>Front Developer</h4>
-              <span class="casa">Nombre de Compañía</span>
-              <span class="fecha">2005 - 2008</span>
+              <h4>Salesforce Developer</h4>
+              <span class="casa">CluodGaia & Plataforma 5</span>
+              <span class="fecha">April - May 2023</span>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis,
-                cumque repellat, tempora recusandae aliquam nemo esse natus
-                impedit, nostrum temporibus veritatis eaque soluta aperiam id
-                repudiandae fugiat deserunt! Explicabo, veritatis?
+                ● CloudConsulting, Salesforce Implementation
+                  Developed a project management application that unified
+                  scattered data into a single platform. Applied agile
+                  methodologies (SCRUM).
+                  Worked for 4 weeks, 9 hours per day.
+                  For more details, please refer to my Github.
+                  Collaborated with a team of three developers.
               </p>
               <div class="conectord">
                 <div class="circulod"></div>
               </div>
             </div>
             <div class="item der">
-              <h4>Front Developer</h4>
-              <span class="casa">Nombre de Compañía</span>
-              <span class="fecha">2005 - 2008</span>
+              <h4>Salesforce Developer</h4>
+              <span class="casa">CluodGaia & Plataforma 5</span>
+              <span class="fecha">April 2023</span>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis,
-                cumque repellat, tempora recusandae aliquam nemo esse natus
-                impedit, nostrum temporibus veritatis eaque soluta aperiam id
-                repudiandae fugiat deserunt! Explicabo, veritatis?
+                ● E-learning Platform, Pair Programming
+                  Developed a user-friendly and adaptable e-learning
+                  platform for both students and instructors.
+                  Worked for 2 weeks, 8 hours per day.
+                  For more details, please refer to my Github.
+                  Collaborated with a partner.
               </p>
               <div class="conectord">
                 <div class="circulod"></div>
               </div>
             </div>
             <div class="item der">
-              <h4>Front Developer</h4>
-              <span class="casa">Nombre de Compañía</span>
-              <span class="fecha">2005 - 2008</span>
+              <h4>It Technician</h4>
+              <span class="casa"> Infinitech</span>
+              <span class="fecha">June 2017 - August 2021</span>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis,
-                cumque repellat, tempora recusandae aliquam nemo esse natus
-                impedit, nostrum temporibus veritatis eaque soluta aperiam id
-                repudiandae fugiat deserunt! Explicabo, veritatis?
+                I was responsible for the repair and maintenance of notebooks, 
+                PCs, and video game consoles. 
+                I assisted customers in diagnosing and resolving hardware and software issues, 
+                demonstrating strong customer service and communication skills. 
+                I provided excellent customer service by promptly addressing inquiries 
+                and effectively resolving technical problems. Additionally, I collaborated 
+                with the sales team to provide product knowledge and technical support during 
+                the sales process. My extensive knowledge of hardware and software troubleshooting 
+                allowed me to excel in this role.
               </p>
               <div class="conectord">
                 <div class="circulod"></div>
@@ -553,7 +604,7 @@
     <section id="contacto" class="contacto section-shadow">
       <div class="contenido-seccion">
         <h2>Contact Me!</h2>
-        <div class="fila">
+        <div class="row">
           <!-- Formulario -->
           <form>
             <div class="col">
@@ -614,6 +665,7 @@
           </li>
         </ul>
       </section>
+      <p>Copyright: <span id="currentYear"></span></p>
     </footer>
 
     <div id="app-cover">

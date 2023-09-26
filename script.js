@@ -37,19 +37,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     openModalBtnSobreMi.addEventListener("click", function () {
-        openPdfModal("../Joaquin Haro Filippon Resume.pdf");
+        openPdfModal("/Documents/Joaquin Haro Filippon Resume.pdf");
     });
 
     openModalBtnCurriculum.addEventListener("click", function () {
-        openPdfModal("../JOAQUIN HARO FILIPPON - CIntro (1).pdf");
+        openPdfModal("/Documents/JOAQUIN HARO FILIPPON - CIntro.pdf");
     });
 
     openModalBtnCurriculum2.addEventListener("click", function () {
-        openPdfModal("../Mayo 2023_JOAQUIN HARO FILIPPON_Certificado Salesforce Bootcamp(P5).pdf");
+        openPdfModal("/Documents/Mayo 2023_JOAQUIN HARO FILIPPON_Certificado Salesforce Bootcamp(P5).pdf");
     });
 
     openModalBtnCurriculum3.addEventListener("click", function () {
-        openPdfModal("../Cert3548022_Associate_20230722.pdf");
+        openPdfModal("/Documents/Cert3548022_Associate_20230722.pdf");
     });
 
     closeButton.addEventListener("click", closePdfModal);
@@ -108,6 +108,21 @@ $(document).ready(function () {
     var volumeBar = $("#volume-range");
 
     var songs = [
+      {
+        name: "Snowfall",
+        album: "øneheart x Reidenshi",
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/%C3%B8neheart%20x%20reidenshi%20%20snowfall.mp3",
+      },
+      {
+        name: "Dirtmouth",
+        album: "Hollow Knight OST",
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/Hollow%20Knight%20OST%20%20Dirtmouth.mp3",
+      },
+      {
+        name: "Gyumnopedies Dai 1 Ban",
+        album: "The Disappearance of Haruhi Suzumiya",
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/Gyumnopedies%20Dai%201%20Ban.mp3",
+      },
       {
         name: "Minecraft - Clark",
         album: "C418",
@@ -444,9 +459,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
-
-
 // bars animated
 
 function addClassesToBar(barElement, level) {
@@ -555,3 +567,5 @@ function animatePaddingForBar(barElement, paddingValues) {
   barElement.style.transition = `padding ${animationDuration} ${animationTiming}`;
   barElement.style.padding = paddingValues;
 }
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();
