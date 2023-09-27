@@ -1,3 +1,8 @@
+window.addEventListener('load', function() {
+  // Desplaza la página al principio
+  window.scrollTo(0, 0);
+});
+
 let menuVisible = false;
 //Función que oculta o muestra el menu
 function mostrarOcultarMenu(){
