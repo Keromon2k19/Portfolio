@@ -300,8 +300,7 @@ $(document).ready(function () {
 
     audio.loop = false;
 
-    playPauseButton.on("click", playPause);
-    playPause();
+    playPauseButton.on("click", playPause); 
 
     sArea.mousemove(function (event) {
       showHover(event);
