@@ -114,45 +114,60 @@ $(document).ready(function () {
         url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/%C3%B8neheart%20x%20reidenshi%20%20snowfall.mp3",
       },
       {
-        name: "Dirtmouth",
-        album: "Hollow Knight OST",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/Hollow%20Knight%20OST%20%20Dirtmouth.mp3",
-      },
-      {
         name: "Gyumnopedies Dai 1 Ban",
         album: "The Disappearance of Haruhi Suzumiya",
         url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/Gyumnopedies%20Dai%201%20Ban.mp3",
       },
       {
-        name: "Minecraft - Clark",
-        album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/y2mate.com%20-%20C418%20%20Clark%20%20Minecraft%20Volume%20Alpha.mp3",
+        name: "Dirtmouth",
+        album: "Hollow Knight OST",
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/Hollow%20Knight%20OST%20%20Dirtmouth.mp3",
       },
       {
-        name: "Minecraft - Danny",
-        album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/y2mate.com%20-%20C418%20%20Danny%20%20Minecraft%20Volume%20Alpha.mp3",
+        name: "Dreamy",
+        album: "Elijah Lee",
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/Elijah%20Lee%20-%20Dreamy.mp3",
+      },
+      {
+        name: "Secunda",
+        album: "TES V Skyrim",
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/TES%20V%20Skyrim%20Soundtrack%20%20Secunda.mp3",
       },
       {
         name: "Minecraft - Dry Hands",
         album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/y2mate.com%20-%20C418%20%20Dry%20Hands%20%20Minecraft%20Volume%20Alpha.mp3",
-      },
-      {
-        name: "Minecraft - Living Mice",
-        album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/y2mate.com%20-%20C418%20%20Living%20Mice%20%20Minecraft%20Volume%20Alpha.mp3",
-      },
-      {
-        name: "Minecraft - Subwoofer Lullaby",
-        album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/y2mate.com%20-%20C418%20%20Subwoofer%20Lullaby%20%20Minecraft%20Volume%20Alpha.mp3",
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Dry%20Hands%20%20Minecraft%20Volume%20Alpha.mp3",
       },
       {
         name: "Minecraft - Wet Hands",
         album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/y2mate.com%20-%20C418%20%20Wet%20Hands%20%20Minecraft%20Volume%20Alpha.mp3",
-      }
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Wet%20Hands%20%20Minecraft%20Volume%20Alpha.mp3",
+      },
+      {
+        name: "Minecraft - Subwoofer Lullaby",
+        album: "C418",
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Subwoofer%20Lullaby%20%20Minecraft%20Volume%20Alpha.mp3",
+      },
+      {
+        name: "Minecraft - Clark",
+        album: "C418",
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Clark%20%20Minecraft%20Volume%20Alpha.mp3",
+      },
+      {
+        name: "Minecraft - Danny",
+        album: "C418",
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Danny%20%20Minecraft%20Volume%20Alpha.mp3",
+      },
+      {
+        name: "Minecraft - Haggstrom",
+        album: "C418",
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Haggstrom%20%20Minecraft%20Volume%20Alpha.mp3",
+      },
+      {
+        name: "Minecraft - Living Mice",
+        album: "C418",
+        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Living%20Mice%20%20Minecraft%20Volume%20Alpha.mp3",
+      },
     ];
 
   function playPause() {
@@ -568,4 +583,51 @@ function animatePaddingForBar(barElement, paddingValues) {
   barElement.style.padding = paddingValues;
 }
 
+// FORM
+
 document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+const $form = document.querySelector('#form');
+const $popup = document.getElementById('popup');
+const $popupMessage = document.getElementById('popup-message');
+const $popupClose = document.getElementById('popup-close');
+
+$form.addEventListener('submit', handleSubmit);
+
+async function handleSubmit(event) {
+  event.preventDefault();
+
+  const form = new FormData(this);
+  const response = await fetch(this.action, {
+    method: this.method,
+    body: form,
+    headers: {
+      'accept': 'application/json'
+    }
+  });
+
+  if (response.ok) {
+    $form.reset();
+    showMessage('Thank you for contacting me, I will get back to you as soon as possible.');
+  }
+}
+
+function showMessage(message) {
+  $popupMessage.textContent = message;
+  $popup.style.display = 'block';
+}
+
+$popupClose.addEventListener('click', function () {
+  $popup.style.display = 'none';
+});
+
+function showMessage(message) {
+  $popupMessage.textContent = message;
+  $popup.style.opacity = 1;
+  $popup.style.visibility = 'visible';
+}
+
+$popupClose.addEventListener('click', function () {
+  $popup.style.opacity = 0;
+  $popup.style.visibility = 'hidden';
+});
