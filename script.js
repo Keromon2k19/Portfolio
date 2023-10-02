@@ -1,80 +1,67 @@
-window.addEventListener('load', function() {
+window.addEventListener("load", function () {
   // Desplaza la página al principio
   window.scrollTo(0, 0);
 });
 
-let menuVisible = false;
-//Función que oculta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
-        menuVisible = true;
-    }
-}
-
-function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
-    document.getElementById("nav").classList = "";
-    menuVisible = false;
-}
-
-
 document.addEventListener("DOMContentLoaded", function () {
-    const openModalBtnSobreMi = document.getElementById("openModalBtn");
-    const openModalBtnCurriculum = document.getElementById("openModalBtnCurriculum");
-    const openModalBtnCurriculum2 = document.getElementById("openModalBtnCurriculum2");
-    const openModalBtnCurriculum3 = document.getElementById("openModalBtnCurriculum3");
-    const pdfModal = document.getElementById("pdfModal");
-    const closeButton = pdfModal.querySelector(".close");
-    const pdfViewer = pdfModal.querySelector(".pdfiframe");
+  const openModalBtnSobreMi = document.getElementById("openModalBtn");
+  const openModalBtnCurriculum = document.getElementById(
+    "openModalBtnCurriculum"
+  );
+  const openModalBtnCurriculum2 = document.getElementById(
+    "openModalBtnCurriculum2"
+  );
+  const openModalBtnCurriculum3 = document.getElementById(
+    "openModalBtnCurriculum3"
+  );
+  const pdfModal = document.getElementById("pdfModal");
+  const closeButton = pdfModal.querySelector(".close");
+  const pdfViewer = pdfModal.querySelector(".pdfiframe");
 
-    function openPdfModal(pdfUrl) {
-        pdfViewer.src = pdfUrl;
-        pdfModal.style.display = "block";
+  function openPdfModal(pdfUrl) {
+    pdfViewer.src = pdfUrl;
+    pdfModal.style.display = "block";
+  }
+
+  function closePdfModal() {
+    pdfModal.style.display = "none";
+    pdfViewer.src = "";
+  }
+
+  openModalBtnSobreMi.addEventListener("click", function () {
+    openPdfModal("/Documents/Joaquin Haro Filippon Resume.pdf");
+  });
+
+  openModalBtnCurriculum.addEventListener("click", function () {
+    openPdfModal("/Documents/JOAQUIN HARO FILIPPON - CIntro.pdf");
+  });
+
+  openModalBtnCurriculum2.addEventListener("click", function () {
+    openPdfModal(
+      "/Documents/Mayo 2023_JOAQUIN HARO FILIPPON_Certificado Salesforce Bootcamp(P5).pdf"
+    );
+  });
+
+  openModalBtnCurriculum3.addEventListener("click", function () {
+    openPdfModal("/Documents/Cert3548022_Associate_20230722.pdf");
+  });
+
+  closeButton.addEventListener("click", closePdfModal);
+
+  window.addEventListener("click", function (event) {
+    if (event.target === pdfModal) {
+      closePdfModal();
     }
-
-    function closePdfModal() {
-        pdfModal.style.display = "none";
-        pdfViewer.src = "";
-    }
-
-    openModalBtnSobreMi.addEventListener("click", function () {
-        openPdfModal("/Documents/Joaquin Haro Filippon Resume.pdf");
-    });
-
-    openModalBtnCurriculum.addEventListener("click", function () {
-        openPdfModal("/Documents/JOAQUIN HARO FILIPPON - CIntro.pdf");
-    });
-
-    openModalBtnCurriculum2.addEventListener("click", function () {
-        openPdfModal("/Documents/Mayo 2023_JOAQUIN HARO FILIPPON_Certificado Salesforce Bootcamp(P5).pdf");
-    });
-
-    openModalBtnCurriculum3.addEventListener("click", function () {
-        openPdfModal("/Documents/Cert3548022_Associate_20230722.pdf");
-    });
-
-    closeButton.addEventListener("click", closePdfModal);
-
-    window.addEventListener("click", function (event) {
-        if (event.target === pdfModal) {
-            closePdfModal();
-        }
-    });
+  });
 });
 
 // LOADER
-$(document).ready(function() {
- 
-    // Fakes the loading setting a timeout
-      setTimeout(function() {
-          $('body').addClass('loaded');
-      }, 3500);
+$(document).ready(function () {
+  // Fakes the loading setting a timeout
+  setTimeout(function () {
+    $("body").addClass("loaded");
+  }, 3500);
 });
-
 
 // MUSIC PLAYER
 
@@ -110,70 +97,70 @@ $(document).ready(function () {
     tFlag = false,
     audio,
     currIndex = 0;
-    var volumeBar = $("#volume-range");
+  var volumeBar = $("#volume-range");
 
-    var songs = [
-      {
-        name: "Snowfall",
-        album: "øneheart x Reidenshi",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/%C3%B8neheart%20x%20reidenshi%20%20snowfall.mp3",
-      },
-      {
-        name: "Gyumnopedies Dai 1 Ban",
-        album: "The Disappearance of Haruhi Suzumiya",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/Gyumnopedies%20Dai%201%20Ban.mp3",
-      },
-      {
-        name: "Dirtmouth",
-        album: "Hollow Knight OST",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/Hollow%20Knight%20OST%20%20Dirtmouth.mp3",
-      },
-      {
-        name: "Dreamy",
-        album: "Elijah Lee",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/Elijah%20Lee%20-%20Dreamy.mp3",
-      },
-      {
-        name: "Secunda",
-        album: "TES V Skyrim",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/TES%20V%20Skyrim%20Soundtrack%20%20Secunda.mp3",
-      },
-      {
-        name: "Minecraft - Dry Hands",
-        album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Dry%20Hands%20%20Minecraft%20Volume%20Alpha.mp3",
-      },
-      {
-        name: "Minecraft - Wet Hands",
-        album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Wet%20Hands%20%20Minecraft%20Volume%20Alpha.mp3",
-      },
-      {
-        name: "Minecraft - Subwoofer Lullaby",
-        album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Subwoofer%20Lullaby%20%20Minecraft%20Volume%20Alpha.mp3",
-      },
-      {
-        name: "Minecraft - Clark",
-        album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Clark%20%20Minecraft%20Volume%20Alpha.mp3",
-      },
-      {
-        name: "Minecraft - Danny",
-        album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Danny%20%20Minecraft%20Volume%20Alpha.mp3",
-      },
-      {
-        name: "Minecraft - Haggstrom",
-        album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Haggstrom%20%20Minecraft%20Volume%20Alpha.mp3",
-      },
-      {
-        name: "Minecraft - Living Mice",
-        album: "C418",
-        url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Living%20Mice%20%20Minecraft%20Volume%20Alpha.mp3",
-      },
-    ];
+  var songs = [
+    {
+      name: "Snowfall",
+      album: "øneheart x Reidenshi",
+      url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/%C3%B8neheart%20x%20reidenshi%20%20snowfall.mp3",
+    },
+    {
+      name: "Gyumnopedies Dai 1 Ban",
+      album: "The Disappearance of Haruhi Suzumiya",
+      url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/Gyumnopedies%20Dai%201%20Ban.mp3",
+    },
+    {
+      name: "Dirtmouth",
+      album: "Hollow Knight OST",
+      url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/Hollow%20Knight%20OST%20%20Dirtmouth.mp3",
+    },
+    {
+      name: "Dreamy",
+      album: "Elijah Lee",
+      url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/Elijah%20Lee%20-%20Dreamy.mp3",
+    },
+    {
+      name: "Secunda",
+      album: "TES V Skyrim",
+      url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/TES%20V%20Skyrim%20Soundtrack%20%20Secunda.mp3",
+    },
+    {
+      name: "Minecraft - Dry Hands",
+      album: "C418",
+      url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Dry%20Hands%20%20Minecraft%20Volume%20Alpha.mp3",
+    },
+    {
+      name: "Minecraft - Wet Hands",
+      album: "C418",
+      url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Wet%20Hands%20%20Minecraft%20Volume%20Alpha.mp3",
+    },
+    {
+      name: "Minecraft - Subwoofer Lullaby",
+      album: "C418",
+      url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Subwoofer%20Lullaby%20%20Minecraft%20Volume%20Alpha.mp3",
+    },
+    {
+      name: "Minecraft - Clark",
+      album: "C418",
+      url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Clark%20%20Minecraft%20Volume%20Alpha.mp3",
+    },
+    {
+      name: "Minecraft - Danny",
+      album: "C418",
+      url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Danny%20%20Minecraft%20Volume%20Alpha.mp3",
+    },
+    {
+      name: "Minecraft - Haggstrom",
+      album: "C418",
+      url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Haggstrom%20%20Minecraft%20Volume%20Alpha.mp3",
+    },
+    {
+      name: "Minecraft - Living Mice",
+      album: "C418",
+      url: "https://github.com/Keromon2k19/Portfolio/raw/main/music/C418%20%20Living%20Mice%20%20Minecraft%20Volume%20Alpha.mp3",
+    },
+  ];
 
   function playPause() {
     setTimeout(function () {
@@ -300,7 +287,7 @@ $(document).ready(function () {
 
     audio.loop = false;
 
-    playPauseButton.on("click", playPause); 
+    playPauseButton.on("click", playPause);
 
     sArea.mousemove(function (event) {
       showHover(event);
@@ -331,7 +318,7 @@ $(document).ready(function () {
         console.log("Estás en la última canción.");
       }
     });
-    
+
     volumeBar.on("input", function () {
       if (audio.volume === 0) {
         // Si el audio está silenciado, desmútelo al mover la barra de volumen
@@ -340,7 +327,6 @@ $(document).ready(function () {
       updateVolumeIcon();
       audio.volume = volumeBar.val() / 100;
     });
-
   }
   initPlayer();
 
@@ -403,26 +389,26 @@ $(document).ready(function () {
       isMuted = !isMuted;
       audio.volume = isMuted ? 0 : volumeBar.val() / 100;
     }
-  
+
     // Actualiza el ícono de volumen
     updateVolumeIcon();
   }
 
   function updateVolumeIcon() {
-  // Cambia los íconos de volumen según la posición de la barra de volumen
-  if (isMuted) {
-    volumeButton.html('<i class="fa fa-volume-mute"></i>');
-  } else {
-    const volume = volumeBar.val() / 100;
-    if (volume === 0) {
-      volumeButton.html('<i class="fa fa-volume-off"></i>');
-    } else if (volume <= 0.5) {
-      volumeButton.html('<i class="fa fa-volume-down"></i>');
+    // Cambia los íconos de volumen según la posición de la barra de volumen
+    if (isMuted) {
+      volumeButton.html('<i class="fa fa-volume-mute"></i>');
     } else {
-      volumeButton.html('<i class="fa fa-volume-up"></i>');
+      const volume = volumeBar.val() / 100;
+      if (volume === 0) {
+        volumeButton.html('<i class="fa fa-volume-off"></i>');
+      } else if (volume <= 0.5) {
+        volumeButton.html('<i class="fa fa-volume-down"></i>');
+      } else {
+        volumeButton.html('<i class="fa fa-volume-up"></i>');
+      }
     }
   }
-}
 
   // Llama a la función para establecer el ícono de volumen inicial
   updateVolumeIcon();
@@ -430,21 +416,21 @@ $(document).ready(function () {
   function showVolumeControl() {
     $("#volume-control").css({
       display: "block",
-      opacity: 1
+      opacity: 1,
     });
   }
-  
+
   function hideVolumeControl() {
     $("#volume-control").css({
-      opacity: 0
+      opacity: 0,
     });
   }
-  
+
   // Llama a la función para mostrar la barra de volumen cuando se hace clic en el botón de volumen
   volumeButton.click(function () {
     toggleVolumeControl();
   });
-  
+
   function toggleVolumeControl() {
     if (volumeControl.css("display") === "none") {
       showVolumeControl();
@@ -455,38 +441,44 @@ $(document).ready(function () {
 
   // Escucha el evento mouseleave en el contenedor del reproductor
   playerContainer.mouseleave(function () {
-      if (!isMuted && !isHovering) {
-          hideVolumeControl();
-      }
+    if (!isMuted && !isHovering) {
+      hideVolumeControl();
+    }
   });
 });
 
 // input animation
-document.addEventListener('DOMContentLoaded', function() {
-  const inputElements = document.querySelectorAll('.input-animate');
+document.addEventListener("DOMContentLoaded", function () {
+  const inputElements = document.querySelectorAll(".input-animate");
 
-  inputElements.forEach(function(inputElement) {
-      inputElement.addEventListener('focus', function() {
-          inputElement.nextElementSibling.classList.add('active');
-      });
+  inputElements.forEach(function (inputElement) {
+    inputElement.addEventListener("focus", function () {
+      inputElement.nextElementSibling.classList.add("active");
+    });
 
-      inputElement.addEventListener('blur', function() {
-          if (inputElement.value === '') {
-              inputElement.nextElementSibling.classList.remove('active');
-          }
-      });
+    inputElement.addEventListener("blur", function () {
+      if (inputElement.value === "") {
+        inputElement.nextElementSibling.classList.remove("active");
+      }
+    });
   });
 });
 
 // bars animated
 
 function addClassesToBar(barElement, level) {
-  const stages = barElement.querySelectorAll('.stage');
-  const levelClasses = ['beginner', 'novice', 'intermediate', 'advanced', 'master'];
+  const stages = barElement.querySelectorAll(".stage");
+  const levelClasses = [
+    "beginner",
+    "novice",
+    "intermediate",
+    "advanced",
+    "master",
+  ];
 
   // Remover todas las clases de nivel de los divs de la barra
-  stages.forEach(stage => {
-    levelClasses.forEach(levelClass => {
+  stages.forEach((stage) => {
+    levelClasses.forEach((levelClass) => {
       stage.classList.remove(levelClass);
     });
   });
@@ -500,20 +492,20 @@ function addClassesToBar(barElement, level) {
 // Función para activar el observador para barras específicas
 function activateObserver(barClassName, level) {
   const bars = document.querySelectorAll(`.${barClassName}`);
-  bars.forEach(bar => {
+  bars.forEach((bar) => {
     const options = {
       root: null,
-      rootMargin: '0px',
-      threshold: 0.25
+      rootMargin: "0px",
+      threshold: 0.25,
     };
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           // Cuando la barra entra en la vista, agrega las clases de nivel
           addClassesToBar(bar, level);
           // Agregar animación al padding
-          animatePaddingForBar(bar, '35px 5px 5px 5px');
+          animatePaddingForBar(bar, "35px 5px 5px 5px");
           observer.unobserve(bar);
         }
       });
@@ -523,21 +515,26 @@ function activateObserver(barClassName, level) {
   });
 }
 
-
 // Activar el observador para barras específicas
-activateObserver('bar-beginner', 'beginner');
-activateObserver('bar-novice', 'novice');
-activateObserver('bar-intermediate', 'intermediate');
-activateObserver('bar-advanced', 'advanced');
-activateObserver('bar-master', 'master');
+activateObserver("bar-beginner", "beginner");
+activateObserver("bar-novice", "novice");
+activateObserver("bar-intermediate", "intermediate");
+activateObserver("bar-advanced", "advanced");
+activateObserver("bar-master", "master");
 
 function addClassesToParagraphs(barElement, level) {
-  const paragraphs = barElement.querySelectorAll('.stage p');
-  const levelClasses = ['beginner', 'novice', 'intermediate', 'advanced', 'master'];
+  const paragraphs = barElement.querySelectorAll(".stage p");
+  const levelClasses = [
+    "beginner",
+    "novice",
+    "intermediate",
+    "advanced",
+    "master",
+  ];
 
   // Remover todas las clases de nivel de los elementos <p>
-  paragraphs.forEach(paragraph => {
-    levelClasses.forEach(levelClass => {
+  paragraphs.forEach((paragraph) => {
+    levelClasses.forEach((levelClass) => {
       paragraph.classList.remove(`stage-title-${levelClass}`);
     });
   });
@@ -551,15 +548,15 @@ function addClassesToParagraphs(barElement, level) {
 // Función para activar el observador para elementos <p> dentro de barras específicas
 function activateParagraphObserver(barClassName, level) {
   const bars = document.querySelectorAll(`.${barClassName}`);
-  bars.forEach(bar => {
+  bars.forEach((bar) => {
     const options = {
       root: null,
-      rootMargin: '0px',
-      threshold: 0.75
+      rootMargin: "0px",
+      threshold: 0.75,
     };
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           // Cuando la barra entra en la vista, agrega las clases de nivel a los elementos <p>
           addClassesToParagraphs(bar, level); // Cambia 'intermediate' al nivel deseado
@@ -573,15 +570,15 @@ function activateParagraphObserver(barClassName, level) {
 }
 
 // Activar el observador para elementos <p> dentro de barras específicas
-activateParagraphObserver('bar-beginner', 'beginner');
-activateParagraphObserver('bar-novice', 'novice');
-activateParagraphObserver('bar-intermediate', 'intermediate');
-activateParagraphObserver('bar-advanced', 'advanced');
-activateParagraphObserver('bar-master', 'master');
+activateParagraphObserver("bar-beginner", "beginner");
+activateParagraphObserver("bar-novice", "novice");
+activateParagraphObserver("bar-intermediate", "intermediate");
+activateParagraphObserver("bar-advanced", "advanced");
+activateParagraphObserver("bar-master", "master");
 
 function animatePaddingForBar(barElement, paddingValues) {
-  const animationDuration = '.5s'; // Duración de la animación en segundos
-  const animationTiming = 'ease-out'; // Temporización de la animación
+  const animationDuration = ".5s"; // Duración de la animación en segundos
+  const animationTiming = "ease-out"; // Temporización de la animación
 
   barElement.style.transition = `padding ${animationDuration} ${animationTiming}`;
   barElement.style.padding = paddingValues;
@@ -591,12 +588,12 @@ function animatePaddingForBar(barElement, paddingValues) {
 
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-const $form = document.querySelector('#form');
-const $popup = document.getElementById('popup');
-const $popupMessage = document.getElementById('popup-message');
-const $popupClose = document.getElementById('popup-close');
+const $form = document.querySelector("#form");
+const $popup = document.getElementById("popup");
+const $popupMessage = document.getElementById("popup-message");
+const $popupClose = document.getElementById("popup-close");
 
-$form.addEventListener('submit', handleSubmit);
+$form.addEventListener("submit", handleSubmit);
 
 async function handleSubmit(event) {
   event.preventDefault();
@@ -606,32 +603,81 @@ async function handleSubmit(event) {
     method: this.method,
     body: form,
     headers: {
-      'accept': 'application/json'
-    }
+      accept: "application/json",
+    },
   });
 
   if (response.ok) {
     $form.reset();
-    showMessage('Thank you for contacting me, I will get back to you as soon as possible.');
+    showMessage(
+      "Thank you for contacting me, I will get back to you as soon as possible."
+    );
   }
 }
 
 function showMessage(message) {
   $popupMessage.textContent = message;
-  $popup.style.display = 'block';
+  $popup.style.display = "block";
 }
 
-$popupClose.addEventListener('click', function () {
-  $popup.style.display = 'none';
+$popupClose.addEventListener("click", function () {
+  $popup.style.display = "none";
 });
 
 function showMessage(message) {
   $popupMessage.textContent = message;
   $popup.style.opacity = 1;
-  $popup.style.visibility = 'visible';
+  $popup.style.visibility = "visible";
 }
 
-$popupClose.addEventListener('click', function () {
+$popupClose.addEventListener("click", function () {
   $popup.style.opacity = 0;
-  $popup.style.visibility = 'hidden';
+  $popup.style.visibility = "hidden";
 });
+
+/** HELPER FUNCTIONS */
+ const qSel = (obj) => document.querySelector(obj);
+ const qSelAll = (obj) => document.querySelectorAll(obj);
+ 
+ /** GLOBAL VARIABLES */
+ const nav = qSel('#nav');
+ const nav_container = qSel('#nav_icon');
+ const nav_icon = qSel('#nav_icon > i');
+ const nav_links = qSelAll('#nav > ul > li > a');
+ 
+ /** OPEN SIDEBAR */
+ nav_container.addEventListener('click', () => {
+     if (nav.classList.contains('open')) {
+         closeSidebar();
+         return;
+     }
+     
+     nav.classList.add('open');
+     nav_icon.classList.add('rotate');
+ });
+
+ /** CLOSE SIDEBAR AFTER CLICK ON LINK */
+ nav_links.forEach(link => {
+     link.addEventListener('click', e => {
+         e.stopPropagation();
+         closeSidebar();
+     });
+ });
+ 
+ /** MOUSE TRACK EVENT */
+ 
+ /** CLOSE SIDEBAR WHILE CLICKING OUTSIDE */
+ window.addEventListener('click', e => {
+     e.stopPropagation();
+     if (!nav.classList.contains('open')) return;
+     if (!e.target.closest('nav')) {
+         closeSidebar();
+         resetNavIcon();
+     }
+ });
+ 
+ /** CLOSE SIDEBAR */
+ function closeSidebar() {
+     nav.classList.remove('open');
+     nav_icon.classList.remove('rotate');
+ }
