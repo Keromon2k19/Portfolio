@@ -8,7 +8,7 @@ html {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x:hidden;
 }
 /* LOADER */
 #content {
@@ -694,12 +694,17 @@ h1 {
 footer {
   background-color: #252a2e;
   color: #fff;
-  padding: 50px 0 30px 0;
+  padding: 100px 0 30px 0;
   text-align: center;
   position: relative;
   width: 100%;
 }
-
+.logo-img-footer {
+  width: 80px;
+  height: auto;
+  translate: 0px -200px;
+  user-select: none;
+}
 footer .redes {
   margin-bottom: 20px;
 }
@@ -750,6 +755,13 @@ footer .arriba:hover {
 }
 
 @media screen and (max-width: 700px) {
+
+  html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
   .aboutme .contenido-seccion p {
     font-size: 16px;
   }
@@ -764,51 +776,54 @@ footer .arriba:hover {
   max-height: 550px;
   left: 15%;
 }
-  .nav.open {
-    transform: translateX(0);
-   width: 100%;
-  }
-  .nav.open .nav_icon{
-    display: none;
-  }
-  .aboutme .row {
-    display: block;
-  }
-  .aboutme .row .col {
-    width: fit-content;
-  }
+.nav_icon{
+  position: fixed;
+}
+.nav.open {
+  transform: translateX(0);
+  width: 100%;
+}
+.nav.open .nav_icon{
+  display: none;
+}
+.aboutme .row {
+  display: block;
+}
+.aboutme .row .col {
+  width: fit-content;
+}
 
-  .curriculum .row {
-    display: block;
-  }
-  .curriculum .row .col {
-    width: 90%;
-  }
-  .curriculum .row .derecha {
-    margin-left: 20px;
-  }
+.curriculum .row {
+  display: block;
+}
+.curriculum .row .col {
+  width: 90%;
+}
+.curriculum .row .derecha {
+  margin-left: 20px;
+}
 
-  .portfolio .galeria {
-    display: block;
-    width: 100%;
-  }
-  .portfolio .galeria .proyecto {
-    max-width: 100%;
-  }
-  .portfolio .galeria .proyecto img {
-    width: 100%;
-  }
-  .contacto .row {
-    display: block;
-  }
-  .contacto .row .col {
-    width: 100%;
-  }
+.portfolio .galeria {
+  display: block;
+  width: 100%;
+}
+.portfolio .galeria .proyecto {
+  max-width: 100%;
+}
+.portfolio .galeria .proyecto img {
+  width: 100%;
+}
+.contacto .row {
+  display: block;
+}
+.contacto .row .col {
+  width: 100%;
+}
 
-  .container-bars-left,.container-bars-right {
-    min-width: 350px;
-    max-width: 550px;
-  }
+.container-bars-left,.container-bars-right {
+  min-width: 350px;
+  max-width: 550px;
+}
 }
 
 
@@ -1993,7 +2008,7 @@ nav a {
 transform: translateX(0);
 }
 .nav_icon {
-position: absolute;
+position: fixed;
 display: flex;
 justify-content: center;
 align-items: center;
