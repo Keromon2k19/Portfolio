@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
+    <link rel="icon" href="/img/wings kero logo final white.webp">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -19,13 +20,13 @@
   <body>
       
     <!-- LOADER -->
-    <div id="loader-wrapper">
+    <!-- <div id="loader-wrapper">
       <div class="loader-logo">
         <img class="logo-img" src="/img/wings kero logo final white.webp" alt="Logo">
       </div>
       <div id="loader"></div>
       <div class="loader-section section"></div>
-    </div>  
+    </div>   -->
   
     <!-- SIDEBAR -->
     
@@ -365,7 +366,10 @@
          </div>
         </div>
       </section>
+
+
     <!-- SECCION CURRICULUM -->
+    
     <section id="curriculum" class="curriculum section-shadow">
       <div class="contenido-seccion">
         <h2>Resume</h2>
@@ -581,7 +585,7 @@
       </div>
 
     <!-- SECCION CONTACTO -->
-    <section id="contacto" class="contacto section-shadow">
+    <section id="contacto" class="contacto">
       <div class="contenido-seccion">
         <h2>Contact Me!</h2>
         <div class="row">
@@ -598,7 +602,7 @@
                 <span class="input-span">Enter Email</span>
               </div>
               <div class="inp">
-                <textarea   class="input-animate" required
+                <textarea class="input-animate" required
                 name="message"
                 id=""
                 cols="4"
@@ -607,14 +611,14 @@
                 <span class="input-span">Enter Messege</span>
               </div>
               <div id="popup" class="form-popup">
-                <p id="popup-message"></p>
                 <button id="popup-close" class="CloseForm">
                   <span class="X"></span>
                   <span class="Y"></span>
                   <div class="close">Close</div>
                 </button>
+                <p id="popup-message"></p>
               </div>
-              <button type="submit" id="hire-btn" class="btn-modal">
+              <button type="submit" id="hire-btn" class="btn-modal" data-target="form-popup">
                 <span class="circle" aria-hidden="true">
                   <span class="icon arrow"></span>
                 </span>

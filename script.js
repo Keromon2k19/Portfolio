@@ -592,6 +592,17 @@ const $form = document.querySelector("#form");
 const $popup = document.getElementById("popup");
 const $popupMessage = document.getElementById("popup-message");
 const $popupClose = document.getElementById("popup-close");
+const $hireButton = document.getElementById("hire-btn");
+
+// Oculta el formulario al principio
+$popup.style.display = "none";
+
+// Agrega un controlador de eventos al botón
+$hireButton.addEventListener("click", function () {
+  // Muestra el formulario en la posición del clic
+  $popup.style.display = "block";
+  // Puedes ajustar más estilos aquí si es necesario para el posicionamiento
+});
 
 $form.addEventListener("submit", handleSubmit);
 
@@ -617,11 +628,11 @@ async function handleSubmit(event) {
 
 function showMessage(message) {
   $popupMessage.textContent = message;
-  $popup.style.display = "block";
+  // No necesitas modificar estilos aquí
 }
 
 $popupClose.addEventListener("click", function () {
-  $popup.style.display = "none";
+  $popup.style.display = "none"; // Oculta el formulario al cerrar
 });
 
 function showMessage(message) {
@@ -635,6 +646,9 @@ $popupClose.addEventListener("click", function () {
   $popup.style.visibility = "hidden";
 });
 
+
+
+/** SIDEBAR */
 /** HELPER FUNCTIONS */
  const qSel = (obj) => document.querySelector(obj);
  const qSelAll = (obj) => document.querySelectorAll(obj);
