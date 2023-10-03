@@ -756,6 +756,12 @@ footer .arriba:hover {
 /* SECCION RESPONSIVE */
 
 @media screen and (max-width: 700px) {
+  .item.izq {
+    animation-name: show-item-res;
+  }
+  .item.der {
+    animation-name: show-item-res;
+  }
   button {
     left: 20%;
     top: 0px;
@@ -830,7 +836,6 @@ footer .arriba:hover {
 
 
 @media screen and (max-width: 435px){
-
   .item.izq {
     animation-name: show-item-res;
   }
