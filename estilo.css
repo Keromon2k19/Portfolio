@@ -1752,12 +1752,12 @@ button:hover .button-text {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position-x: -30vw;
-  animation: liquid-fill 2s ease-out forwards;
+  animation: liquid-fill 1s ease-out forwards;
 }
 .stage-title-beginner {
   color: #fff;
-  animation: move-up 0.5s ease-in-out 0.5s forwards;
   transition: text-shadow 0.5s;
+  animation: move-up 0.5s ease-in-out forwards;
 }
 .stage-title-beginner:hover {
   text-shadow: 0 0 5px #1799c1;
@@ -1767,12 +1767,12 @@ button:hover .button-text {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position-x: -30vw;
-  animation: liquid-fill 2s ease-out 1s forwards;
+  animation: liquid-fill 1s ease-out .5s forwards;
 }
 .stage-title-novice {
   color: #fff;
   transition: text-shadow 0.5s;
-  animation: move-up 0.5s ease-in-out 1.5s forwards;
+  animation: move-up 0.5s ease-in-out .5s forwards;
 }
 .stage-title-novice:hover {
   text-shadow: 0 0 7px #1799c1;
@@ -1782,12 +1782,12 @@ button:hover .button-text {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position-x: -30vw;
-  animation: liquid-fill 2s ease-out 2s forwards;
+  animation: liquid-fill 1s ease-out 1s forwards;
 }
 .stage-title-intermediate {
   color: #fff;
   transition: text-shadow 0.5s;
-  animation: move-up 0.5s ease-in-out 2.5s forwards;
+  animation: move-up 0.5s ease-in-out 1s forwards;
 }
 .stage-title-intermediate:hover {
   text-shadow: 0 0 7px #1799c1;
@@ -1797,12 +1797,12 @@ button:hover .button-text {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position-x: -30vw;
-  animation: liquid-fill 2s ease-out 3s forwards;
+  animation: liquid-fill 1s ease-out 1.5s forwards;
 }
 .stage-title-advanced {
   color: #fff;
   transition: text-shadow 0.5s;
-  animation: move-up 0.5s ease-in-out 3.5s forwards;
+  animation: move-up 0.5s ease-in-out 1.5s forwards;
 }
 .stage-title-advanced:hover {
   text-shadow: 0 0 7px #1799c1;
@@ -1812,12 +1812,12 @@ button:hover .button-text {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position-x: -30vw;
-  animation: liquid-fill 2s ease-out 4s forwards;
+  animation: liquid-fill 1s ease-out 2s forwards;
 }
 .stage-title-master {
   color: #fff;
   transition: text-shadow 0.5s;
-  animation: move-up 0.5s ease-in-out 4.5s forwards;
+  animation: move-up 0.5s ease-in-out 2s forwards;
 }
 .stage-title-master:hover {
   text-shadow: 0 0 7px #1799c1;

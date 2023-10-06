@@ -1,7 +1,7 @@
-window.addEventListener("load", function () {
-  // Desplaza la página al principio
-  window.scrollTo(0, 0);
-});
+// window.addEventListener("load", function () {
+//   // Desplaza la página al principio
+//   window.scrollTo(0, 0);
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
   const openModalBtnSobreMi = document.getElementById("openModalBtn");
